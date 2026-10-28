@@ -19,6 +19,16 @@
       "sha256": "48105f82cbcbe3817242d494b2d33fd3b1501412334edc32b1138be40628c88c"
     },
     {
+      "path": "Progress Report.docx",
+      "bytes": 18108,
+      "sha256": "db12810d435c402610f818265fe2efbf3ef1e886cea53456fc7917807b1cd8fc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6895,
+      "sha256": "aa8c75ebcbb6477954cc08ed6904d4d0d69865de9767c114c421b1b1884cf268"
+    },
+    {
       "path": "app_w10_4b.py",
       "bytes": 17029,
       "sha256": "08e50d53ef098603a3433e3a111ad77680ceb8ebcae82bc2426089a87223386f"
@@ -34,6 +44,11 @@
       "sha256": "82f5807ca6c0b8cb026d94b6d82dbc390600409efb47f619e4b05ee76ce40e57"
     },
     {
+      "path": "docs/Progress_Report.docx",
+      "bytes": 18108,
+      "sha256": "db12810d435c402610f818265fe2efbf3ef1e886cea53456fc7917807b1cd8fc"
+    },
+    {
       "path": "docs/RELEASE_VERIFICATION.md",
       "bytes": 2126,
       "sha256": "4c130ee7931c52267a42129749645b1246a592cd24586107d1f57fe75354c0d4"
@@ -42,6 +57,11 @@
       "path": "dss_core.py",
       "bytes": 5054,
       "sha256": "2d33b1532402544a2ac8e881c9f34fc56ed5bc23a6e16f40ca488225c18a026d"
+    },
+    {
+      "path": "media/Demonstration_Video.mp4",
+      "bytes": 23450170,
+      "sha256": "7aaef37f34869faf1ca457b264a561a9a4946f4731578557ef8e223fd3f7dc8e"
     },
     {
       "path": "predictive_model_lock/model_lock_manifest.json",
@@ -62,16 +82,6 @@
       "path": "predictive_whatif_3c3.py",
       "bytes": 3049,
       "sha256": "8866b63440db18a6df3adff474db11f493510440983a6c3c5200f64ec3b18593"
-    },
-    {
-      "path": "Progress Report.docx",
-      "bytes": 18108,
-      "sha256": "db12810d435c402610f818265fe2efbf3ef1e886cea53456fc7917807b1cd8fc"
-    },
-    {
-      "path": "README.md",
-      "bytes": 6297,
-      "sha256": "a6aa282658bdd379a6d9f52a1dc26280e72f02440513dd8639da2ab84cc35f4a"
     },
     {
       "path": "requirements.txt",

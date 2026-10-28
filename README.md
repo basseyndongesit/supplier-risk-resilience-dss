@@ -2,6 +2,15 @@
 
 **Week 10 research prototype | Synthetic healthcare procurement data | Human-in-the-loop**
 
+## Research report and application demonstration
+
+The following materials accompany the research prototype:
+
+- **[Week 10 Progress Report](docs/Progress_Report.docx):** Documents the research purpose, predictive models, evaluation evidence, application functionality, and limitations.
+- **[Application Demonstration Video](media/Demonstration_Video.mp4):** Recorded walkthrough of the Streamlit decision-support application.
+
+Both materials describe a research prototype using synthetic data. The application and its predictions are not validated for real-world clinical or procurement decisions.
+
 ## Purpose and intended use
 This nine-screen Streamlit application helps a supply or inventory manager review supplier purchase-order risk, retrospective shortage scenarios, predictive KPI estimates, and human decisions. It is an academic prototype based on synthetic data, not a clinically or operationally validated decision system. Model predictions and what-if changes are not causal effects.
 
