@@ -73,6 +73,3 @@ python -m unittest -v test_w10_4b test_w10_3b4 test_w10_3b3b_on_demand
 - Importance and local contributions are noncausal and may vary with correlated features and the selected explanation reference.
 - Previously documented limitations in receipt timing/attribution, feature provenance, and uncertainty coverage remain.
 - Human decisions are recorded separately in a local companion database (`decision_records_local.db`) created at runtime. **Do not publish that database** or real decision records.
-
-## Submission readiness
-The research prototype has been published at https://github.com/basseyndongesit/supplier-risk-resilience-dss. Public access without signing in was confirmed. A fresh clone retrieved all four Git LFS assets, and their SHA-256 hashes matched the approved release. Local dependency installation, nine-screen application testing, synthetic-data sharing authorization, and decision-record exclusion checks were completed.
