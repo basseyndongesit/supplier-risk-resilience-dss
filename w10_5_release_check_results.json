@@ -1,0 +1,166 @@
+{
+  "root": "C:\\Users\\basse\\OneDrive\\Documents\\ANALYTICS spring 2025\\MRP\\Supplier_Risk_DSS_Week10_OneDrive_Release",
+  "results": [
+    {
+      "check": "hash supplier_risk_output/supplier_risk.db",
+      "status": "PASS",
+      "detail": "approved artifact SHA256"
+    },
+    {
+      "check": "hash predictive_model_output/random_forest.joblib",
+      "status": "PASS",
+      "detail": "approved artifact SHA256"
+    },
+    {
+      "check": "hash w10_2b_model_output/kpi2_shortage_validation_selected.joblib",
+      "status": "PASS",
+      "detail": "approved artifact SHA256"
+    },
+    {
+      "check": "hash w10_2b_model_output/kpi3_emergency_premium_validation_selected.joblib",
+      "status": "PASS",
+      "detail": "approved artifact SHA256"
+    },
+    {
+      "check": "required app_w10_4b.py",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required predictive_model_lock/model_lock_manifest.json",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required w10_2a_dataset_output/validation.csv",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required README.md",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required Progress Report.docx",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "syntax app_w10_4b.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax build_kpi_dataset_w10_2a.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax dss_core.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax predictive_risk_3c2.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax predictive_whatif_3c3.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax test_w10_3b3b_on_demand.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax test_w10_3b4.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax test_w10_4b.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b2a_live_features.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b2a_score_frozen.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b2b_dashboard.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b3b_dashboard.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b3b_live_ui.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b3_local_explain.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b4_dashboard.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b4_decision_summary.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_3b_explainability.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_4b_whatif.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "syntax w10_4c_verify.py",
+      "status": "PASS",
+      "detail": "valid"
+    },
+    {
+      "check": "requirements.txt",
+      "status": "PASS",
+      "detail": "present"
+    }
+  ],
+  "environment_versions_for_review": {
+    "streamlit": "1.66.0",
+    "pandas": "2.3.3",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "shap": null,
+    "matplotlib": null,
+    "plotly": null,
+    "scipy": "1.18.1"
+  },
+  "counts": {
+    "PASS": 29,
+    "FAIL": 0
+  },
+  "note": "Static checks only; does not prove clean-install reproducibility or OneDrive access."
+}

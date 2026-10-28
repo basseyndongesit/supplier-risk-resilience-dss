@@ -1,0 +1,482 @@
+{
+  "version": "W10.2B-1.0",
+  "status": "VALIDATION_COMPLETE_NOT_INDEPENDENT_TEST",
+  "dataset_semantics": "Synthetic retrospective 3/5/7-day scenario-surrogate targets; not realized future outcomes",
+  "source_db_sha256": "0c2bb19febb7f2a4ad9d2ab6a642450b1861021a283523eda44c5fec8e4f6573",
+  "manifest_sha256": "8e3c2436cf93d2183b56fc0527acc75b430595f5d9f55fa15cc061756a2613d9",
+  "input_sha256": {
+    "train": "6999f1e58a434a874d1a5f078415d7af2aa3a843f93ef8cabb0e123ab8eb00f8",
+    "validation": "437f39ee48abcb9e4d383d13803cdf81c304c7944e24b3c1b8959e89125c74c5"
+  },
+  "test_data_accessed": false,
+  "partition_policy": "Chronological review windows; embargo every PO appearing in more than one window; all reviews/scenarios of retained POs in exactly one partition",
+  "train_rows": 87045,
+  "validation_rows": 27198,
+  "po_overlap_train_validation": 0,
+  "train_review_end": "2026-01-01",
+  "validation_review_start": "2026-01-08",
+  "seed": 84735,
+  "sklearn_version": "1.9.1",
+  "python_version": "3.13.14",
+  "model_results": {
+    "kpi2_shortage": {
+      "target": "Incremental_Shortage_Units",
+      "features": [
+        "Order_Quantity",
+        "Planned_Lead_Days",
+        "Days_To_Promise",
+        "Supplier_Type",
+        "Item_Category",
+        "Item_Criticality",
+        "Review_Month",
+        "Delay_Scenario_Days",
+        "Available_Inventory_at_review",
+        "Safety_Stock_Level_at_review",
+        "Demand_SMA_30d",
+        "Supplier_Completed_90d",
+        "Supplier_Late_Rate_90d",
+        "Supplier_History_Missing"
+      ],
+      "algorithm_comparison": {
+        "zero_baseline": {
+          "overall": {
+            "n": 27198,
+            "mae": 7.018007446135745,
+            "rmse": 28.185252855151724,
+            "mean_actual": 7.018007446135745,
+            "mean_prediction": 0.0,
+            "bias_pred_minus_actual": -7.018007446135745,
+            "positive_rate": 0.22747996176189425,
+            "positive_only_mae": 30.85110174882819,
+            "zero_only_mae": 0.0
+          },
+          "by_delay": {
+            "3": {
+              "n": 9066,
+              "mae": 3.843837781822193,
+              "rmse": 15.655563532437137,
+              "mean_actual": 3.843837781822193,
+              "mean_prediction": 0.0,
+              "bias_pred_minus_actual": -3.843837781822193,
+              "positive_rate": 0.19887491727332893,
+              "positive_only_mae": 19.327916433721576,
+              "zero_only_mae": 0.0
+            },
+            "5": {
+              "n": 9066,
+              "mae": 6.892602400176484,
+              "rmse": 26.556958934047696,
+              "mean_actual": 6.892602400176484,
+              "mean_prediction": 0.0,
+              "bias_pred_minus_actual": -6.892602400176484,
+              "positive_rate": 0.22909772777410103,
+              "positive_only_mae": 30.08586103033221,
+              "zero_only_mae": 0.0
+            },
+            "7": {
+              "n": 9066,
+              "mae": 10.317582156408559,
+              "rmse": 37.85309364085905,
+              "mean_actual": 10.317582156408559,
+              "mean_prediction": 0.0,
+              "bias_pred_minus_actual": -10.317582156408559,
+              "positive_rate": 0.2544672402382528,
+              "positive_only_mae": 40.5458170047681,
+              "zero_only_mae": 0.0
+            }
+          }
+        },
+        "mean_baseline": {
+          "overall": {
+            "n": 27198,
+            "mae": 13.960925417521125,
+            "rmse": 27.579685157586198,
+            "mean_actual": 7.018007446135745,
+            "mean_prediction": 10.952849678901718,
+            "bias_pred_minus_actual": 3.9348422327659707,
+            "positive_rate": 0.22747996176189425,
+            "positive_only_mae": 24.176325343839594,
+            "zero_only_mae": 10.952849678901716
+          },
+          "by_delay": {
+            "3": {
+              "n": 9066,
+              "mae": 11.638192587712636,
+              "rmse": 16.7588672283669,
+              "mean_actual": 3.843837781822193,
+              "mean_prediction": 10.952849678901716,
+              "bias_pred_minus_actual": 7.109011897079523,
+              "positive_rate": 0.19887491727332893,
+              "positive_only_mae": 14.39894996247343,
+              "zero_only_mae": 10.952849678901718
+            },
+            "5": {
+              "n": 9066,
+              "mae": 13.779155868070298,
+              "rmse": 25.96631872141626,
+              "mean_actual": 6.892602400176484,
+              "mean_prediction": 10.952849678901716,
+              "bias_pred_minus_actual": 4.060247278725233,
+              "positive_rate": 0.22909772777410103,
+              "positive_only_mae": 23.289533314434873,
+              "zero_only_mae": 10.952849678901714
+            },
+            "7": {
+              "n": 9066,
+              "mae": 16.465427796780435,
+              "rmse": 36.42537249575546,
+              "mean_actual": 10.317582156408559,
+              "mean_prediction": 10.952849678901716,
+              "bias_pred_minus_actual": 0.6352675224931572,
+              "positive_rate": 0.2544672402382528,
+              "positive_only_mae": 32.61606303680744,
+              "zero_only_mae": 10.952849678901718
+            }
+          }
+        },
+        "random_forest": {
+          "overall": {
+            "n": 27198,
+            "mae": 1.5768210648349248,
+            "rmse": 8.557841905942018,
+            "mean_actual": 7.018007446135745,
+            "mean_prediction": 7.047124613953926,
+            "bias_pred_minus_actual": 0.02911716781818133,
+            "positive_rate": 0.22747996176189425,
+            "positive_only_mae": 4.183327152961161,
+            "zero_only_mae": 0.8092967600785105
+          },
+          "by_delay": {
+            "3": {
+              "n": 9066,
+              "mae": 1.0515320912517,
+              "rmse": 4.945570781911588,
+              "mean_actual": 3.843837781822193,
+              "mean_prediction": 4.361064462261064,
+              "bias_pred_minus_actual": 0.5172266804388713,
+              "positive_rate": 0.19887491727332893,
+              "positive_only_mae": 2.108498134417471,
+              "zero_only_mae": 0.7891460557528864
+            },
+            "5": {
+              "n": 9066,
+              "mae": 1.479918289059652,
+              "rmse": 7.5112150695515485,
+              "mean_actual": 6.892602400176484,
+              "mean_prediction": 6.923661752468506,
+              "bias_pred_minus_actual": 0.031059352292022394,
+              "positive_rate": 0.22909772777410103,
+              "positive_only_mae": 3.9648786840743813,
+              "zero_only_mae": 0.7414345660026206
+            },
+            "7": {
+              "n": 9066,
+              "mae": 2.199012814193422,
+              "rmse": 11.78273958302296,
+              "mean_actual": 10.317582156408559,
+              "mean_prediction": 9.85664762713221,
+              "bias_pred_minus_actual": -0.46093452927634976,
+              "positive_rate": 0.2544672402382528,
+              "positive_only_mae": 6.001547434847644,
+              "zero_only_mae": 0.9011215033709208
+            }
+          }
+        },
+        "hist_gradient_boosting": {
+          "overall": {
+            "n": 27198,
+            "mae": 1.997673935433351,
+            "rmse": 7.462718905718405,
+            "mean_actual": 7.018007446135745,
+            "mean_prediction": 7.448793233861209,
+            "bias_pred_minus_actual": 0.4307857877254638,
+            "positive_rate": 0.22747996176189425,
+            "positive_only_mae": 4.596642492467824,
+            "zero_only_mae": 1.2323691682936486
+          },
+          "by_delay": {
+            "3": {
+              "n": 9066,
+              "mae": 1.331225547106939,
+              "rmse": 4.780567080196902,
+              "mean_actual": 3.843837781822193,
+              "mean_prediction": 4.328859174606867,
+              "bias_pred_minus_actual": 0.48502139278467443,
+              "positive_rate": 0.19887491727332893,
+              "positive_only_mae": 3.1022677120370794,
+              "zero_only_mae": 0.8915740224795063
+            },
+            "5": {
+              "n": 9066,
+              "mae": 1.964635842812376,
+              "rmse": 6.980578661145532,
+              "mean_actual": 6.892602400176484,
+              "mean_prediction": 7.306276196770406,
+              "bias_pred_minus_actual": 0.41367379659392367,
+              "positive_rate": 0.22909772777410103,
+              "positive_only_mae": 4.570966384733196,
+              "zero_only_mae": 1.190083183552175
+            },
+            "7": {
+              "n": 9066,
+              "mae": 2.697160416380738,
+              "rmse": 9.772114425476097,
+              "mean_actual": 10.317582156408559,
+              "mean_prediction": 10.711244330206352,
+              "bias_pred_minus_actual": 0.39366217379779317,
+              "positive_rate": 0.2544672402382528,
+              "positive_only_mae": 5.787664167752373,
+              "zero_only_mae": 1.64230139072393
+            }
+          }
+        }
+      },
+      "ranked_by_validation_mae": [
+        "random_forest",
+        "hist_gradient_boosting",
+        "zero_baseline",
+        "mean_baseline"
+      ],
+      "selected_algorithm": "random_forest",
+      "selected_model_file": "kpi2_shortage_validation_selected.joblib",
+      "selected_model_sha256": "014edabd936c91f67a842e34485b5ffb1ba09af2b522d0eef8eca2e8351e39ad",
+      "selected_validation_mae": 1.5768210648349248
+    },
+    "kpi3_emergency_premium": {
+      "target": "Estimated_Emergency_Procurement_Cost",
+      "features": [
+        "Order_Quantity",
+        "Planned_Lead_Days",
+        "Days_To_Promise",
+        "Supplier_Type",
+        "Item_Category",
+        "Item_Criticality",
+        "Review_Month",
+        "Delay_Scenario_Days",
+        "Available_Inventory_at_review",
+        "Safety_Stock_Level_at_review",
+        "Demand_SMA_30d",
+        "Supplier_Completed_90d",
+        "Supplier_Late_Rate_90d",
+        "Supplier_History_Missing",
+        "Normal_Unit_Cost",
+        "Emergency_Unit_Cost",
+        "Unit_Cost_Premium"
+      ],
+      "algorithm_comparison": {
+        "zero_baseline": {
+          "overall": {
+            "n": 27198,
+            "mae": 102.96325244503272,
+            "rmse": 807.6810580884022,
+            "mean_actual": 102.96325244503272,
+            "mean_prediction": 0.0,
+            "bias_pred_minus_actual": -102.96325244503272,
+            "positive_rate": 0.22707552025884256,
+            "positive_only_mae": 453.4317584196891,
+            "zero_only_mae": 0.0
+          },
+          "by_delay": {
+            "3": {
+              "n": 9066,
+              "mae": 57.39527575557026,
+              "rmse": 452.4969216017329,
+              "mean_actual": 57.39527575557026,
+              "mean_prediction": 0.0,
+              "bias_pred_minus_actual": -57.39527575557026,
+              "positive_rate": 0.1984337083609089,
+              "positive_only_mae": 289.24156197887714,
+              "zero_only_mae": 0.0
+            },
+            "5": {
+              "n": 9066,
+              "mae": 101.46795940878006,
+              "rmse": 763.5092054744823,
+              "mean_actual": 101.46795940878006,
+              "mean_prediction": 0.0,
+              "bias_pred_minus_actual": -101.46795940878006,
+              "positive_rate": 0.228656518861681,
+              "positive_only_mae": 443.75712493970093,
+              "zero_only_mae": 0.0
+            },
+            "7": {
+              "n": 9066,
+              "mae": 150.02652217074785,
+              "rmse": 1081.3631692826805,
+              "mean_actual": 150.02652217074785,
+              "mean_prediction": 0.0,
+              "bias_pred_minus_actual": -150.02652217074785,
+              "positive_rate": 0.2541363335539378,
+              "positive_only_mae": 590.3387369791667,
+              "zero_only_mae": 0.0
+            }
+          }
+        },
+        "mean_baseline": {
+          "overall": {
+            "n": 27198,
+            "mae": 199.61768546297986,
+            "rmse": 801.4913381982851,
+            "mean_actual": 102.96325244503272,
+            "mean_prediction": 128.28330311907638,
+            "bias_pred_minus_actual": 25.32005067404363,
+            "positive_rate": 0.22707552025884256,
+            "positive_only_mae": 442.4271714787733,
+            "zero_only_mae": 128.28330311907635
+          },
+          "by_delay": {
+            "3": {
+              "n": 9066,
+              "mae": 161.70875889753884,
+              "rmse": 454.4055004106751,
+              "mean_actual": 57.39527575557026,
+              "mean_prediction": 128.28330311907635,
+              "bias_pred_minus_actual": 70.88802736350608,
+              "positive_rate": 0.1984337083609089,
+              "positive_only_mae": 296.72976342343486,
+              "zero_only_mae": 128.28330311907638
+            },
+            "5": {
+              "n": 9066,
+              "mae": 197.88332364042287,
+              "rmse": 757.2117423257479,
+              "mean_actual": 101.46795940878006,
+              "mean_prediction": 128.28330311907635,
+              "bias_pred_minus_actual": 26.81534371029629,
+              "positive_rate": 0.228656518861681,
+              "positive_only_mae": 432.6700788289305,
+              "zero_only_mae": 128.2833031190764
+            },
+            "7": {
+              "n": 9066,
+              "mae": 239.2609738509779,
+              "rmse": 1071.1260962655901,
+              "mean_actual": 150.02652217074785,
+              "mean_prediction": 128.28330311907635,
+              "bias_pred_minus_actual": -21.743219051671513,
+              "positive_rate": 0.2541363335539378,
+              "positive_only_mae": 564.9688772750744,
+              "zero_only_mae": 128.2833031190764
+            }
+          }
+        },
+        "random_forest": {
+          "overall": {
+            "n": 27198,
+            "mae": 48.341688987170066,
+            "rmse": 470.25661848823427,
+            "mean_actual": 102.96325244503272,
+            "mean_prediction": 90.06369354545569,
+            "bias_pred_minus_actual": -12.899558899577023,
+            "positive_rate": 0.22707552025884256,
+            "positive_only_mae": 152.55229474385263,
+            "zero_only_mae": 17.725919738132323
+          },
+          "by_delay": {
+            "3": {
+              "n": 9066,
+              "mae": 29.341247895501837,
+              "rmse": 203.18316490871894,
+              "mean_actual": 57.39527575557026,
+              "mean_prediction": 67.07300807418514,
+              "bias_pred_minus_actual": 9.677732318614872,
+              "positive_rate": 0.1984337083609089,
+              "positive_only_mae": 75.57771917939574,
+              "zero_only_mae": 17.895064898429432
+            },
+            "5": {
+              "n": 9066,
+              "mae": 45.565797743543804,
+              "rmse": 416.8153912021068,
+              "mean_actual": 101.46795940878006,
+              "mean_prediction": 90.25342619277355,
+              "bias_pred_minus_actual": -11.21453321600652,
+              "positive_rate": 0.228656518861681,
+              "positive_only_mae": 140.15598653663005,
+              "zero_only_mae": 17.52554872766109
+            },
+            "7": {
+              "n": 9066,
+              "mae": 70.11802132246456,
+              "rmse": 669.6307884578465,
+              "mean_actual": 150.02652217074785,
+              "mean_prediction": 112.86464636940842,
+              "bias_pred_minus_actual": -37.16187580133943,
+              "positive_rate": 0.2541363335539378,
+              "positive_only_mae": 223.80872198084492,
+              "zero_only_mae": 17.751358453948093
+            }
+          }
+        },
+        "hist_gradient_boosting": {
+          "overall": {
+            "n": 27198,
+            "mae": 46.63839765971776,
+            "rmse": 373.42324163383086,
+            "mean_actual": 102.96325244503272,
+            "mean_prediction": 98.62620822010886,
+            "bias_pred_minus_actual": -4.337044224923848,
+            "positive_rate": 0.22707552025884256,
+            "positive_only_mae": 134.45422222700913,
+            "zero_only_mae": 20.83920954595164
+          },
+          "by_delay": {
+            "3": {
+              "n": 9066,
+              "mae": 27.19968072828921,
+              "rmse": 202.26174595008163,
+              "mean_actual": 57.39527575557026,
+              "mean_prediction": 58.212477020184515,
+              "bias_pred_minus_actual": 0.8172012646142561,
+              "positive_rate": 0.1984337083609089,
+              "positive_only_mae": 86.33352633532874,
+              "zero_only_mae": 12.56065661282697
+            },
+            "5": {
+              "n": 9066,
+              "mae": 45.01600068741999,
+              "rmse": 350.4221343611115,
+              "mean_actual": 101.46795940878006,
+              "mean_prediction": 95.97511987976765,
+              "bias_pred_minus_actual": -5.492839529012412,
+              "positive_rate": 0.228656518861681,
+              "positive_only_mae": 130.68926046437954,
+              "zero_only_mae": 19.61907983547703
+            },
+            "7": {
+              "n": 9066,
+              "mae": 67.69951156344408,
+              "rmse": 504.60803209222007,
+              "mean_actual": 150.02652217074785,
+              "mean_prediction": 141.69102776037448,
+              "bias_pred_minus_actual": -8.335494410373391,
+              "positive_rate": 0.2541363335539378,
+              "positive_only_mae": 175.4151153012557,
+              "zero_only_mae": 30.99783291631039
+            }
+          }
+        }
+      },
+      "ranked_by_validation_mae": [
+        "hist_gradient_boosting",
+        "random_forest",
+        "zero_baseline",
+        "mean_baseline"
+      ],
+      "selected_algorithm": "hist_gradient_boosting",
+      "selected_model_file": "kpi3_emergency_premium_validation_selected.joblib",
+      "selected_model_sha256": "e8b86ead4bdc2040642a88a0eb0993f35d30438231d7bf222f3a3955d2400013",
+      "selected_validation_mae": 46.63839765971776
+    }
+  },
+  "limitations": [
+    "Targets are retrospective simulated scenario outputs, not observed future outcomes.",
+    "Feature pipeline verified against CSV allowlists, but upstream dataset builder requires independent code review.",
+    "Chronological outcome distribution shift can affect generalization.",
+    "Emergency premium equals simulated shortage times unit-cost premium; formula using the true shortage is an oracle, not a deployable predictive baseline.",
+    "No independent test evaluation occurs in W10.2B.",
+    "Feature attribution, interactive deployment, and narrative generation are later deliverables."
+  ],
+  "cost_identity": "Emergency cost = simulated incremental shortage * unit-cost premium (subject to rounding). This uses the true simulated target and cannot be evaluated as a prediction without an independently estimated shortage.",
+  "development_subset_used": false
+}

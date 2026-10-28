@@ -1,0 +1,110 @@
+{
+  "overall": "INCOMPLETE",
+  "counts": {
+    "PASS": 17,
+    "FAIL": 0,
+    "NOT_EVALUATED": 3
+  },
+  "results": [
+    {
+      "check": "source_db",
+      "status": "PASS",
+      "detail": "supplier_risk_output\\supplier_risk.db SHA256 0c2bb19febb7f2a4ad9d2ab6a642450b1861021a283523eda44c5fec8e4f6573"
+    },
+    {
+      "check": "kpi1",
+      "status": "PASS",
+      "detail": "predictive_model_output\\random_forest.joblib SHA256 99103fdf772ba131ad90d15b7d7e8bbee44c24e558acc252bdd9fd9efe020b88"
+    },
+    {
+      "check": "kpi2",
+      "status": "PASS",
+      "detail": "w10_2b_model_output\\kpi2_shortage_validation_selected.joblib SHA256 014edabd936c91f67a842e34485b5ffb1ba09af2b522d0eef8eca2e8351e39ad"
+    },
+    {
+      "check": "kpi3",
+      "status": "PASS",
+      "detail": "w10_2b_model_output\\kpi3_emergency_premium_validation_selected.joblib SHA256 e8b86ead4bdc2040642a88a0eb0993f35d30438231d7bf222f3a3955d2400013"
+    },
+    {
+      "check": "module app_w10_4b.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module w10_4b_whatif.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module w10_3b4_dashboard.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module w10_3b4_decision_summary.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module w10_3b3b_live_ui.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module w10_3b2a_live_features.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module w10_3b2a_score_frozen.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module dss_core.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module predictive_risk_3c2.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module predictive_whatif_3c3.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "module w10_3b_explainability.py",
+      "status": "PASS",
+      "detail": "present, syntax valid"
+    },
+    {
+      "check": "screen order",
+      "status": "PASS",
+      "detail": "nine labels in approved order"
+    },
+    {
+      "check": "unit tests",
+      "status": "PASS",
+      "detail": "test_cost_link (test_w10_4b.W104BTests.test_cost_link) ... ok\ntest_model_scoring_and_clipping (test_w10_4b.W104BTests.test_model_scoring_and_clipping) ... ok\ntest_negative_rejected (test_w10_4b.W104BTests.test_negative_rejected) ... ok\ntest_screens_preserved (test_w10_4b.W104BTests.test_screens_preserved) ... ok\ntest_source_unchanged (test_w10_4b.W104BTests.test_source_unchanged) ... ok\ntest_summary_has_all_four_elements (test_w10_4b.W104BTests.test_summary_has_all_four_elements) ... ok\ntest_unapproved_rejected (test_w10_4b.W104BTests.test_unapproved_rejected) ... ok\ntest_dashboard_navigation_labels (test_w10_3b4.WorkflowTests.test_dashboard_navigation_labels) ... ok\ntest_explanations_remain_on_demand (test_w10_3b4.WorkflowTests.test_explanations_remain_on_demand) ... ok\ntest_final_screen_contains_evidence_and_decision_form (test_w10_3b4.WorkflowTests.test_final_screen_contains_evidence_and_decision_form) ... ok\ntest_navigation_order (test_w10_3b4.WorkflowTests.test_navigation_order) ... ok\ntest_original_db_protected_before_save (test_w10_3b4.WorkflowTests.test_original_db_protected_before_save) ... ok\ntest_button_gates_attribution (test_w10_3b3b_on_demand.OnDemandSafety.test_button_gates_attribution) ... ok\ntest_cache_scoped_to_selected_po (test_w10_3b3b_on_demand.OnDemandSafety.test_cache_scoped_to_selected_po) ... ok\ntest_original_only_label (test_w10_3b3b_on_demand.OnDemandSafety.test_original_only_label) ... ok\ntest_syntax (test_w10_3b3b_on_demand.OnDemandSafety.test_syntax) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.076s\n\nOK\n"
+    },
+    {
+      "check": "manual UI",
+      "status": "NOT_EVALUATED",
+      "detail": "requires Streamlit interaction, confirm FT-38 through FT-49 locally"
+    },
+    {
+      "check": "GitHub or OneDrive release",
+      "status": "NOT_EVALUATED",
+      "detail": "requires actual repository/folder inspection"
+    },
+    {
+      "check": "progress report",
+      "status": "NOT_EVALUATED",
+      "detail": "requires final updated report review"
+    }
+  ]
+}

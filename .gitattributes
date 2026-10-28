@@ -1,0 +1,2 @@
+supplier_risk_output/supplier_risk.db filter=lfs diff=lfs merge=lfs -text
+*.joblib filter=lfs diff=lfs merge=lfs -text

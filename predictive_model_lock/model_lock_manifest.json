@@ -1,0 +1,54 @@
+{
+  "version": "2C.2",
+  "status": "MODEL_ARTIFACT_LOCKED_TEST_NOT_EVALUATED",
+  "selected_model": "random_forest",
+  "model_file": "random_forest.joblib",
+  "secondary_benchmark": "logistic_regression",
+  "calibration": "none; original uncalibrated probabilities",
+  "operational_policy": "rank open POs by predicted probability within each review date; no fixed threshold approved",
+  "ranking_capacity": "not selected; validate top-k per review date before deployment",
+  "training": "original 2B training partition only; no refitting",
+  "selection": "2B validation and 2C comparison only; independent test not accessed",
+  "model_features": [
+    "Order_Quantity",
+    "Planned_Lead_Days",
+    "Days_To_Promise",
+    "Supplier_Completed_90d",
+    "Supplier_Late_Rate_90d",
+    "Supplier_History_Missing",
+    "Supplier_Type",
+    "Item_Category",
+    "Review_Month"
+  ],
+  "source_files_sha256": {
+    "C:\\Users\\basse\\OneDrive\\Documents\\ANALYTICS spring 2025\\MRP\\Supplier Risk DSS\\predictive_model_output\\random_forest.joblib": "99103fdf772ba131ad90d15b7d7e8bbee44c24e558acc252bdd9fd9efe020b88",
+    "C:\\Users\\basse\\OneDrive\\Documents\\ANALYTICS spring 2025\\MRP\\Supplier Risk DSS\\predictive_model_output\\logistic_regression.joblib": "357205f54ed410bb4c91f6f805f27a4f06ff381caa022773ae75f66dd66e7858",
+    "C:\\Users\\basse\\OneDrive\\Documents\\ANALYTICS spring 2025\\MRP\\Supplier Risk DSS\\predictive_model_output\\model_validation_report.json": "3d0b2d7ea6a8d7f814a1d319abf983801c4ae4412cd212002ced05665fb2b357",
+    "C:\\Users\\basse\\OneDrive\\Documents\\ANALYTICS spring 2025\\MRP\\Supplier Risk DSS\\predictive_model_output\\validation_predictions.csv": "b8771b185914b468faf15cd4cf886e972756bd2b7f0bc4ddaa537641ee7c569b",
+    "C:\\Users\\basse\\OneDrive\\Documents\\ANALYTICS spring 2025\\MRP\\Supplier Risk DSS\\model_selection_analysis.json": "d83baec4a92f3aba56bab61a020c923dddf64ae85ef1c2825c79943332244b74"
+  },
+  "selection_metrics_validation": {
+    "roc_auc": 0.6200909577314071,
+    "pr_auc_average_precision": 0.3299528473837363,
+    "brier_score": 0.17273145256579078,
+    "log_loss": 0.5259449724477395,
+    "precision_at_0_5": 0.5405405405405406,
+    "recall_at_0_5": 0.026373626373626374,
+    "f1_at_0_5": 0.050293378038558254,
+    "confusion_at_0_5": {
+      "tn": 7425,
+      "fp": 51,
+      "fn": 2215,
+      "tp": 60
+    },
+    "mean_predicted_probability": 0.24015188759355266
+  },
+  "unresolved_limitations": [
+    "2A outcome-maturity selection bias unquantified",
+    "No recalibration fitted or independently verified",
+    "Review-level ranking capacity not backtested",
+    "PO-grouped bootstrap excludes retraining uncertainty",
+    "Synthetic-only data; not validated for clinical procurement operations"
+  ],
+  "created_utc": "2026-10-20T20:17:43.037815+00:00"
+}

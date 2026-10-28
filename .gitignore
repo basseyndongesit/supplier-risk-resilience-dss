@@ -1,0 +1,26 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Credentials
+*.pem
+*.key
+secrets.toml
+.streamlit/secrets.toml
+
+# Local decision records: never publish
+decision_records_local.db*
+*decision_records_local.db*
+
+# Temporary files
+.pytest_cache/
+.ipynb_checkpoints/
+*.tmp
+*.bak
+~$*
+.venv/

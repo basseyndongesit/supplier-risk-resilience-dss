@@ -1,0 +1,1698 @@
+{
+  "version": "W10.3A-1.0.1",
+  "status": "EXPLANATIONS_GENERATED_PENDING_REVIEW",
+  "data_scope": "validation only; independent test not read",
+  "source_db_sha256": "0c2bb19febb7f2a4ad9d2ab6a642450b1861021a283523eda44c5fec8e4f6573",
+  "validation_sha256": "437f39ee48abcb9e4d383d13803cdf81c304c7944e24b3c1b8959e89125c74c5",
+  "models": {
+    "kpi2_shortage": {
+      "status": "PASS",
+      "validation_rows_sampled": 900,
+      "global_metric": "increase in MAE after feature permutation (positive = useful)",
+      "global_importance": [
+        {
+          "feature": "Available_Inventory_at_review",
+          "mean_increase_in_mae": 16.47200159982371,
+          "std_increase_in_mae": 0.22395443155536793
+        },
+        {
+          "feature": "Demand_SMA_30d",
+          "mean_increase_in_mae": 15.305244616958047,
+          "std_increase_in_mae": 0.5590149592850108
+        },
+        {
+          "feature": "Delay_Scenario_Days",
+          "mean_increase_in_mae": 2.052647371975337,
+          "std_increase_in_mae": 0.08929532908336793
+        },
+        {
+          "feature": "Order_Quantity",
+          "mean_increase_in_mae": 1.2469361382162572,
+          "std_increase_in_mae": 0.05123129511999497
+        },
+        {
+          "feature": "Days_To_Promise",
+          "mean_increase_in_mae": 0.9550166990838571,
+          "std_increase_in_mae": 0.18171917354077982
+        },
+        {
+          "feature": "Safety_Stock_Level_at_review",
+          "mean_increase_in_mae": 0.852630207577413,
+          "std_increase_in_mae": 0.019294496771026952
+        },
+        {
+          "feature": "Supplier_Late_Rate_90d",
+          "mean_increase_in_mae": 0.011492632769244096,
+          "std_increase_in_mae": 0.007441602442335682
+        },
+        {
+          "feature": "Supplier_Type",
+          "mean_increase_in_mae": 0.00862369352179034,
+          "std_increase_in_mae": 0.003862317600879396
+        },
+        {
+          "feature": "Item_Criticality",
+          "mean_increase_in_mae": 0.005218211717296454,
+          "std_increase_in_mae": 0.0016862906863963027
+        },
+        {
+          "feature": "Review_Month",
+          "mean_increase_in_mae": 0.004219379079027326,
+          "std_increase_in_mae": 0.0068800981505835294
+        },
+        {
+          "feature": "Supplier_Completed_90d",
+          "mean_increase_in_mae": 0.002807844248434869,
+          "std_increase_in_mae": 0.0045826618073761686
+        },
+        {
+          "feature": "Planned_Lead_Days",
+          "mean_increase_in_mae": 0.0014913500287983734,
+          "std_increase_in_mae": 0.008553751041392063
+        },
+        {
+          "feature": "Supplier_History_Missing",
+          "mean_increase_in_mae": 0.0,
+          "std_increase_in_mae": 1.8129866073473578e-16
+        },
+        {
+          "feature": "Item_Category",
+          "mean_increase_in_mae": -0.0027204015508367854,
+          "std_increase_in_mae": 0.0007418818988737479
+        }
+      ],
+      "local_reference_row_values": {
+        "Order_Quantity": "76",
+        "Planned_Lead_Days": "10",
+        "Days_To_Promise": "4",
+        "Supplier_Type": "Specialty Supplier",
+        "Item_Category": "PPE",
+        "Item_Criticality": "High",
+        "Review_Month": "1",
+        "Delay_Scenario_Days": "3",
+        "Available_Inventory_at_review": "59",
+        "Safety_Stock_Level_at_review": "30",
+        "Demand_SMA_30d": "2.26666666667",
+        "Supplier_Completed_90d": "42",
+        "Supplier_Late_Rate_90d": "0.404761904762",
+        "Supplier_History_Missing": "0"
+      },
+      "local_explanations": [
+        {
+          "baseline_reference_prediction": 0.0019047627728174604,
+          "prediction": 0.0019047627728174604,
+          "contribution_sum": 0.0,
+          "reconstruction_error": 0.0,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "76",
+              "reference_value": "76",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "10",
+              "reference_value": "10",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "4",
+              "reference_value": "4",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Specialty Supplier",
+              "reference_value": "Specialty Supplier",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "PPE",
+              "reference_value": "PPE",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "High",
+              "reference_value": "High",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "1",
+              "reference_value": "1",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "3",
+              "reference_value": "3",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "59",
+              "reference_value": "59",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "30",
+              "reference_value": "30",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "2.26666666667",
+              "reference_value": "2.26666666667",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "42",
+              "reference_value": "42",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.404761904762",
+              "reference_value": "0.404761904762",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 0.0
+            }
+          ],
+          "row_index_in_sample": 0,
+          "PO_ID": "2337",
+          "Review_Date": "2026-01-08",
+          "Delay_Scenario_Days": 3
+        },
+        {
+          "baseline_reference_prediction": 0.0019047627728174604,
+          "prediction": 0.042148148611111116,
+          "contribution_sum": 0.04024338583829225,
+          "reconstruction_error": -1.4085954624931674e-15,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "343",
+              "reference_value": "59",
+              "contribution": -5.716276638171997
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "5.23333333333",
+              "reference_value": "2.26666666667",
+              "contribution": 3.608337168731505
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "7",
+              "reference_value": "3",
+              "contribution": 1.091622129211301
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "15",
+              "reference_value": "4",
+              "contribution": 0.8955288744852224
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "64",
+              "reference_value": "30",
+              "contribution": 0.13448954299770788
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "20",
+              "reference_value": "10",
+              "contribution": 0.030796341477092315
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "Low",
+              "reference_value": "High",
+              "contribution": 0.01204022159172402
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.0847457627119",
+              "reference_value": "0.404761904762",
+              "contribution": -0.010265501790613451
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "59",
+              "reference_value": "42",
+              "contribution": -0.008613493718116816
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "75",
+              "reference_value": "76",
+              "contribution": 0.0028876986908783556
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "2",
+              "reference_value": "1",
+              "contribution": -0.0008413254441896512
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Surgical Supplies",
+              "reference_value": "PPE",
+              "contribution": 0.0005383677777779947
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": -2.2898349882893854e-16
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Specialty Supplier",
+              "reference_value": "Specialty Supplier",
+              "contribution": 1.0408340855860843e-16
+            }
+          ],
+          "row_index_in_sample": 224,
+          "PO_ID": "27099",
+          "Review_Date": "2026-02-12",
+          "Delay_Scenario_Days": 7
+        },
+        {
+          "baseline_reference_prediction": 0.0019047627728174604,
+          "prediction": 5.959736639365972,
+          "contribution_sum": 5.957831876593154,
+          "reconstruction_error": -8.881784197001252e-16,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "0",
+              "reference_value": "59",
+              "contribution": 5.7763097491962805
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "7",
+              "reference_value": "3",
+              "contribution": 2.14626262282323
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "0.9",
+              "reference_value": "2.26666666667",
+              "contribution": -1.0463058193238792
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "13",
+              "reference_value": "76",
+              "contribution": -0.5181715271186794
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "9",
+              "reference_value": "30",
+              "contribution": -0.5153622711773629
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.0952380952381",
+              "reference_value": "0.404761904762",
+              "contribution": 0.10337771062559922
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "14",
+              "reference_value": "10",
+              "contribution": 0.040287482632300975
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "9",
+              "reference_value": "4",
+              "contribution": -0.029220902587246567
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "21",
+              "reference_value": "42",
+              "contribution": -0.019174015812375073
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Distributor",
+              "reference_value": "Specialty Supplier",
+              "contribution": 0.01779601117612191
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Surgical Supplies",
+              "reference_value": "PPE",
+              "contribution": 0.0018107629092262434
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "3",
+              "reference_value": "1",
+              "contribution": 0.00022207324993798365
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 5.551115123125783e-17
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "High",
+              "reference_value": "High",
+              "contribution": 0.0
+            }
+          ],
+          "row_index_in_sample": 449,
+          "PO_ID": "14286",
+          "Review_Date": "2026-03-19",
+          "Delay_Scenario_Days": 7
+        },
+        {
+          "baseline_reference_prediction": 0.0019047627728174604,
+          "prediction": 0.0016047331938804806,
+          "contribution_sum": -0.0003000295789369748,
+          "reconstruction_error": 4.9873299934333204e-18,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "91",
+              "reference_value": "59",
+              "contribution": -0.017745704441163405
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "11",
+              "reference_value": "4",
+              "contribution": 0.014274454624614092
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "7",
+              "reference_value": "3",
+              "contribution": 0.007810984531254607
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "1.43333333333",
+              "reference_value": "2.26666666667",
+              "contribution": -0.0030315652493180024
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "100",
+              "reference_value": "42",
+              "contribution": 0.0027332378107663867
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "4",
+              "reference_value": "1",
+              "contribution": -0.0026725881499143223
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "Medium",
+              "reference_value": "High",
+              "contribution": -0.0014658815670289852
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "21",
+              "reference_value": "10",
+              "contribution": 0.00049583666776896
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "37",
+              "reference_value": "76",
+              "contribution": -0.00039374428210678256
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Manufacturer",
+              "reference_value": "Specialty Supplier",
+              "contribution": -0.00030505952380952364
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Pharmacy Supplies",
+              "reference_value": "PPE",
+              "contribution": -2.168404344971009e-19
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": -2.168404344971009e-19
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "29",
+              "reference_value": "30",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.45",
+              "reference_value": "0.404761904762",
+              "contribution": 0.0
+            }
+          ],
+          "row_index_in_sample": 674,
+          "PO_ID": "18787",
+          "Review_Date": "2026-04-16",
+          "Delay_Scenario_Days": 7
+        },
+        {
+          "baseline_reference_prediction": 0.0019047627728174604,
+          "prediction": 0.14099331518326538,
+          "contribution_sum": 0.13908855241044793,
+          "reconstruction_error": 0.0,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "36",
+              "reference_value": "59",
+              "contribution": 0.05982760837114701
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "2.5",
+              "reference_value": "2.26666666667",
+              "contribution": 0.05703444544156898
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "7",
+              "reference_value": "3",
+              "contribution": 0.0325302204968916
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.0625",
+              "reference_value": "0.404761904762",
+              "contribution": -0.015589128329685073
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "5",
+              "reference_value": "4",
+              "contribution": 0.014878325578483391
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "8",
+              "reference_value": "10",
+              "contribution": -0.003054069251543206
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Facilities Supplies",
+              "reference_value": "PPE",
+              "contribution": -0.0029021088366386286
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "70",
+              "reference_value": "76",
+              "contribution": -0.001663554425280299
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "5",
+              "reference_value": "1",
+              "contribution": -0.001335213630069714
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Distributor",
+              "reference_value": "Specialty Supplier",
+              "contribution": -0.0006646825396825371
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "48",
+              "reference_value": "42",
+              "contribution": 2.670953525641187e-05
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "31",
+              "reference_value": "30",
+              "contribution": -9.974659986866641e-18
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 3.469446951953614e-18
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "High",
+              "reference_value": "High",
+              "contribution": 2.168404344971009e-19
+            }
+          ],
+          "row_index_in_sample": 899,
+          "PO_ID": "29730",
+          "Review_Date": "2026-05-21",
+          "Delay_Scenario_Days": 7
+        }
+      ],
+      "mean_absolute_reconstruction_error": 4.603522424373452e-16,
+      "caveats": [
+        "Global permutation importance is correlated-feature-sensitive and not causal.",
+        "Local contributions use one sampled reference row and finite random permutation paths, not a population-background SHAP baseline.",
+        "Synthetic retrospective targets do not establish real-world accuracy.",
+        "Explanation calculations use validation data only, not independent test data."
+      ],
+      "model_sha256": "014edabd936c91f67a842e34485b5ffb1ba09af2b522d0eef8eca2e8351e39ad"
+    },
+    "kpi3_emergency_premium": {
+      "status": "PASS",
+      "validation_rows_sampled": 900,
+      "global_metric": "increase in MAE after feature permutation (positive = useful)",
+      "global_importance": [
+        {
+          "feature": "Available_Inventory_at_review",
+          "mean_increase_in_mae": 229.06275549222832,
+          "std_increase_in_mae": 11.794385510927386
+        },
+        {
+          "feature": "Demand_SMA_30d",
+          "mean_increase_in_mae": 179.88754962729016,
+          "std_increase_in_mae": 16.71884617020212
+        },
+        {
+          "feature": "Unit_Cost_Premium",
+          "mean_increase_in_mae": 104.8470232732909,
+          "std_increase_in_mae": 20.757491664486384
+        },
+        {
+          "feature": "Delay_Scenario_Days",
+          "mean_increase_in_mae": 13.800161613356275,
+          "std_increase_in_mae": 7.23436992243584
+        },
+        {
+          "feature": "Safety_Stock_Level_at_review",
+          "mean_increase_in_mae": 5.605429868690848,
+          "std_increase_in_mae": 0.7753999733196039
+        },
+        {
+          "feature": "Emergency_Unit_Cost",
+          "mean_increase_in_mae": 5.595617785742225,
+          "std_increase_in_mae": 1.5383304751095284
+        },
+        {
+          "feature": "Order_Quantity",
+          "mean_increase_in_mae": 4.004860052948369,
+          "std_increase_in_mae": 0.8802748980288969
+        },
+        {
+          "feature": "Normal_Unit_Cost",
+          "mean_increase_in_mae": 1.5293111917632085,
+          "std_increase_in_mae": 0.3817130843324741
+        },
+        {
+          "feature": "Planned_Lead_Days",
+          "mean_increase_in_mae": 1.0979670746717431,
+          "std_increase_in_mae": 1.0190692910662047
+        },
+        {
+          "feature": "Supplier_Completed_90d",
+          "mean_increase_in_mae": 1.0430024321135438,
+          "std_increase_in_mae": 0.43632906892501494
+        },
+        {
+          "feature": "Supplier_Late_Rate_90d",
+          "mean_increase_in_mae": 0.9900100302288024,
+          "std_increase_in_mae": 0.30919120120782345
+        },
+        {
+          "feature": "Item_Category",
+          "mean_increase_in_mae": 0.2316307488326288,
+          "std_increase_in_mae": 0.2108248564385215
+        },
+        {
+          "feature": "Supplier_Type",
+          "mean_increase_in_mae": 0.128375363897149,
+          "std_increase_in_mae": 0.10616827358409739
+        },
+        {
+          "feature": "Supplier_History_Missing",
+          "mean_increase_in_mae": 0.0,
+          "std_increase_in_mae": 0.0
+        },
+        {
+          "feature": "Item_Criticality",
+          "mean_increase_in_mae": -0.1914569064104749,
+          "std_increase_in_mae": 0.09933603019645673
+        },
+        {
+          "feature": "Review_Month",
+          "mean_increase_in_mae": -1.007534168407524,
+          "std_increase_in_mae": 0.520165034874758
+        },
+        {
+          "feature": "Days_To_Promise",
+          "mean_increase_in_mae": -4.561355234758866,
+          "std_increase_in_mae": 3.4377010786268776
+        }
+      ],
+      "local_reference_row_values": {
+        "Order_Quantity": "76",
+        "Planned_Lead_Days": "10",
+        "Days_To_Promise": "4",
+        "Supplier_Type": "Specialty Supplier",
+        "Item_Category": "PPE",
+        "Item_Criticality": "High",
+        "Review_Month": "1",
+        "Delay_Scenario_Days": "3",
+        "Available_Inventory_at_review": "59",
+        "Safety_Stock_Level_at_review": "30",
+        "Demand_SMA_30d": "2.26666666667",
+        "Supplier_Completed_90d": "42",
+        "Supplier_Late_Rate_90d": "0.404761904762",
+        "Supplier_History_Missing": "0",
+        "Normal_Unit_Cost": "165.91",
+        "Emergency_Unit_Cost": "251.89",
+        "Unit_Cost_Premium": "85.98"
+      },
+      "local_explanations": [
+        {
+          "baseline_reference_prediction": 0.0,
+          "prediction": 0.0,
+          "contribution_sum": 0.0,
+          "reconstruction_error": 0.0,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "76",
+              "reference_value": "76",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "10",
+              "reference_value": "10",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "4",
+              "reference_value": "4",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Specialty Supplier",
+              "reference_value": "Specialty Supplier",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "PPE",
+              "reference_value": "PPE",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "High",
+              "reference_value": "High",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "1",
+              "reference_value": "1",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "3",
+              "reference_value": "3",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "59",
+              "reference_value": "59",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "30",
+              "reference_value": "30",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "2.26666666667",
+              "reference_value": "2.26666666667",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "42",
+              "reference_value": "42",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.404761904762",
+              "reference_value": "0.404761904762",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Normal_Unit_Cost",
+              "observed_value": "165.91",
+              "reference_value": "165.91",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Emergency_Unit_Cost",
+              "observed_value": "251.89",
+              "reference_value": "251.89",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Unit_Cost_Premium",
+              "observed_value": "85.98",
+              "reference_value": "85.98",
+              "contribution": 0.0
+            }
+          ],
+          "row_index_in_sample": 0,
+          "PO_ID": "2337",
+          "Review_Date": "2026-01-08",
+          "Delay_Scenario_Days": 3
+        },
+        {
+          "baseline_reference_prediction": 0.0,
+          "prediction": 46.923135733325566,
+          "contribution_sum": 46.92313573332561,
+          "reconstruction_error": 4.263256414560601e-14,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "343",
+              "reference_value": "59",
+              "contribution": -185.24295599124662
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "5.23333333333",
+              "reference_value": "2.26666666667",
+              "contribution": 121.36238188797196
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "7",
+              "reference_value": "3",
+              "contribution": 92.85316667233593
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "15",
+              "reference_value": "4",
+              "contribution": 81.98784194694005
+            },
+            {
+              "feature": "Unit_Cost_Premium",
+              "observed_value": "17.63",
+              "reference_value": "85.98",
+              "contribution": -71.08687714054798
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.0847457627119",
+              "reference_value": "0.404761904762",
+              "contribution": 3.330541740142796
+            },
+            {
+              "feature": "Emergency_Unit_Cost",
+              "observed_value": "44.81",
+              "reference_value": "251.89",
+              "contribution": 2.6603852174748583
+            },
+            {
+              "feature": "Normal_Unit_Cost",
+              "observed_value": "27.18",
+              "reference_value": "165.91",
+              "contribution": 1.4770119078514294
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "20",
+              "reference_value": "10",
+              "contribution": -0.4183605075968124
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "75",
+              "reference_value": "76",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Specialty Supplier",
+              "reference_value": "Specialty Supplier",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Surgical Supplies",
+              "reference_value": "PPE",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "Low",
+              "reference_value": "High",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "2",
+              "reference_value": "1",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "64",
+              "reference_value": "30",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "59",
+              "reference_value": "42",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 0.0
+            }
+          ],
+          "row_index_in_sample": 224,
+          "PO_ID": "27099",
+          "Review_Date": "2026-02-12",
+          "Delay_Scenario_Days": 7
+        },
+        {
+          "baseline_reference_prediction": 0.0,
+          "prediction": 16.064688821025413,
+          "contribution_sum": 16.06468882102547,
+          "reconstruction_error": 5.684341886080802e-14,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "0",
+              "reference_value": "59",
+              "contribution": 238.13621426167228
+            },
+            {
+              "feature": "Unit_Cost_Premium",
+              "observed_value": "2.36",
+              "reference_value": "85.98",
+              "contribution": -232.3795431669958
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "0.9",
+              "reference_value": "2.26666666667",
+              "contribution": -73.16420652988015
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "7",
+              "reference_value": "3",
+              "contribution": 60.62381702258087
+            },
+            {
+              "feature": "Emergency_Unit_Cost",
+              "observed_value": "16.16",
+              "reference_value": "251.89",
+              "contribution": 13.952839400427901
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "9",
+              "reference_value": "4",
+              "contribution": 12.357556192786625
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "9",
+              "reference_value": "30",
+              "contribution": -4.956372149838297
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.0952380952381",
+              "reference_value": "0.404761904762",
+              "contribution": 1.4943837902720387
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "13",
+              "reference_value": "76",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "14",
+              "reference_value": "10",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Distributor",
+              "reference_value": "Specialty Supplier",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Surgical Supplies",
+              "reference_value": "PPE",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "High",
+              "reference_value": "High",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "3",
+              "reference_value": "1",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "21",
+              "reference_value": "42",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Normal_Unit_Cost",
+              "observed_value": "13.8",
+              "reference_value": "165.91",
+              "contribution": 0.0
+            }
+          ],
+          "row_index_in_sample": 449,
+          "PO_ID": "14286",
+          "Review_Date": "2026-03-19",
+          "Delay_Scenario_Days": 7
+        },
+        {
+          "baseline_reference_prediction": 0.0,
+          "prediction": 2.484453051036305,
+          "contribution_sum": 2.484453051036308,
+          "reconstruction_error": 2.6645352591003757e-15,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Unit_Cost_Premium",
+              "observed_value": "0.61",
+              "reference_value": "85.98",
+              "contribution": -11.914818545821529
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "11",
+              "reference_value": "4",
+              "contribution": 9.922503822121046
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "7",
+              "reference_value": "3",
+              "contribution": 8.970722903715929
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "100",
+              "reference_value": "42",
+              "contribution": 3.5194347590404544
+            },
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "91",
+              "reference_value": "59",
+              "contribution": -3.209814458594012
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "1.43333333333",
+              "reference_value": "2.26666666667",
+              "contribution": -2.5017011372591096
+            },
+            {
+              "feature": "Emergency_Unit_Cost",
+              "observed_value": "3.25",
+              "reference_value": "251.89",
+              "contribution": -2.1688876533249015
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "4",
+              "reference_value": "1",
+              "contribution": -0.8314105970727018
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "21",
+              "reference_value": "10",
+              "contribution": 0.6984239582311323
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "37",
+              "reference_value": "76",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Manufacturer",
+              "reference_value": "Specialty Supplier",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Pharmacy Supplies",
+              "reference_value": "PPE",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "Medium",
+              "reference_value": "High",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "29",
+              "reference_value": "30",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.45",
+              "reference_value": "0.404761904762",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Normal_Unit_Cost",
+              "observed_value": "2.64",
+              "reference_value": "165.91",
+              "contribution": 0.0
+            }
+          ],
+          "row_index_in_sample": 674,
+          "PO_ID": "18787",
+          "Review_Date": "2026-04-16",
+          "Delay_Scenario_Days": 7
+        },
+        {
+          "baseline_reference_prediction": 0.0,
+          "prediction": 30.771293763042756,
+          "contribution_sum": 30.77129376304275,
+          "reconstruction_error": -7.105427357601002e-15,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Unit_Cost_Premium",
+              "observed_value": "3.87",
+              "reference_value": "85.98",
+              "contribution": -93.25301422186371
+            },
+            {
+              "feature": "Delay_Scenario_Days",
+              "observed_value": "7",
+              "reference_value": "3",
+              "contribution": 51.714655371767066
+            },
+            {
+              "feature": "Available_Inventory_at_review",
+              "observed_value": "36",
+              "reference_value": "59",
+              "contribution": 47.05810187688717
+            },
+            {
+              "feature": "Demand_SMA_30d",
+              "observed_value": "2.5",
+              "reference_value": "2.26666666667",
+              "contribution": 15.641420300124349
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "5",
+              "reference_value": "4",
+              "contribution": 6.302593409262458
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.0625",
+              "reference_value": "0.404761904762",
+              "contribution": 5.994044490749719
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Facilities Supplies",
+              "reference_value": "PPE",
+              "contribution": -2.199396164861838
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "5",
+              "reference_value": "1",
+              "contribution": -1.8466654240688918
+            },
+            {
+              "feature": "Emergency_Unit_Cost",
+              "observed_value": "11.31",
+              "reference_value": "251.89",
+              "contribution": 1.3595541250464285
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "70",
+              "reference_value": "76",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "8",
+              "reference_value": "10",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Distributor",
+              "reference_value": "Specialty Supplier",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Item_Criticality",
+              "observed_value": "High",
+              "reference_value": "High",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Safety_Stock_Level_at_review",
+              "observed_value": "31",
+              "reference_value": "30",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "48",
+              "reference_value": "42",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 0.0
+            },
+            {
+              "feature": "Normal_Unit_Cost",
+              "observed_value": "7.44",
+              "reference_value": "165.91",
+              "contribution": 0.0
+            }
+          ],
+          "row_index_in_sample": 899,
+          "PO_ID": "29730",
+          "Review_Date": "2026-05-21",
+          "Delay_Scenario_Days": 7
+        }
+      ],
+      "mean_absolute_reconstruction_error": 2.1849189124623082e-14,
+      "caveats": [
+        "Global permutation importance is correlated-feature-sensitive and not causal.",
+        "Local contributions use one sampled reference row and finite random permutation paths, not a population-background SHAP baseline.",
+        "Synthetic retrospective targets do not establish real-world accuracy.",
+        "Explanation calculations use validation data only, not independent test data."
+      ],
+      "model_sha256": "e8b86ead4bdc2040642a88a0eb0993f35d30438231d7bf222f3a3955d2400013"
+    },
+    "kpi1_late_delivery": {
+      "status": "PASS",
+      "validation_rows_sampled": 900,
+      "global_metric": "increase in MAE after feature permutation (positive = useful)",
+      "global_importance": [
+        {
+          "feature": "Days_To_Promise",
+          "mean_increase_in_mae": 0.005164133989162323,
+          "std_increase_in_mae": 0.000980054168585732
+        },
+        {
+          "feature": "Supplier_Late_Rate_90d",
+          "mean_increase_in_mae": 0.005098196515831451,
+          "std_increase_in_mae": 0.0016083249256342604
+        },
+        {
+          "feature": "Supplier_Completed_90d",
+          "mean_increase_in_mae": 0.0027601531373426615,
+          "std_increase_in_mae": 0.00010249272839402391
+        },
+        {
+          "feature": "Planned_Lead_Days",
+          "mean_increase_in_mae": 0.0013215666945102604,
+          "std_increase_in_mae": 2.6270500007010633e-05
+        },
+        {
+          "feature": "Supplier_Type",
+          "mean_increase_in_mae": 0.0011918042531121424,
+          "std_increase_in_mae": 0.00042650819636571083
+        },
+        {
+          "feature": "Order_Quantity",
+          "mean_increase_in_mae": 0.0007576616913872644,
+          "std_increase_in_mae": 0.00024531899026390973
+        },
+        {
+          "feature": "Supplier_History_Missing",
+          "mean_increase_in_mae": 0.0,
+          "std_increase_in_mae": 0.0
+        },
+        {
+          "feature": "Item_Category",
+          "mean_increase_in_mae": -8.6781665588657e-05,
+          "std_increase_in_mae": 0.0003482729589487211
+        },
+        {
+          "feature": "Review_Month",
+          "mean_increase_in_mae": -0.0006561580198601683,
+          "std_increase_in_mae": 0.0006928331175323628
+        }
+      ],
+      "local_reference_row_values": {
+        "Order_Quantity": "27",
+        "Planned_Lead_Days": "14",
+        "Days_To_Promise": "3",
+        "Supplier_Completed_90d": "48",
+        "Supplier_Late_Rate_90d": "0.04166667",
+        "Supplier_History_Missing": "0",
+        "Supplier_Type": "Distributor",
+        "Item_Category": "Clinical Equipment Parts",
+        "Review_Month": "2"
+      },
+      "local_explanations": [
+        {
+          "baseline_reference_prediction": 0.10810618975704674,
+          "prediction": 0.10810618975704674,
+          "contribution_sum": 9.540979117872439e-18,
+          "reconstruction_error": 1.3877787807814457e-17,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 3.469446951953614e-18
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "14",
+              "reference_value": "14",
+              "contribution": 2.6020852139652106e-18
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.04166667",
+              "reference_value": "0.04166667",
+              "contribution": 2.6020852139652106e-18
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Distributor",
+              "reference_value": "Distributor",
+              "contribution": 1.734723475976807e-18
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Clinical Equipment Parts",
+              "reference_value": "Clinical Equipment Parts",
+              "contribution": -1.734723475976807e-18
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "2",
+              "reference_value": "2",
+              "contribution": -1.734723475976807e-18
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "27",
+              "reference_value": "27",
+              "contribution": 8.673617379884035e-19
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "3",
+              "reference_value": "3",
+              "contribution": 8.673617379884035e-19
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "48",
+              "reference_value": "48",
+              "contribution": 8.673617379884035e-19
+            }
+          ],
+          "row_index_in_sample": 0,
+          "PO_ID": "999",
+          "Review_Date": "2026-02-05"
+        },
+        {
+          "baseline_reference_prediction": 0.10810618975704674,
+          "prediction": 0.3347098468816845,
+          "contribution_sum": 0.2266036571246378,
+          "reconstruction_error": 5.551115123125783e-17,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.4742268",
+              "reference_value": "0.04166667",
+              "contribution": 0.21580561060622558
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Manufacturer",
+              "reference_value": "Distributor",
+              "contribution": 0.02583393176384433
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "11",
+              "reference_value": "3",
+              "contribution": -0.017756645495664504
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "4",
+              "reference_value": "2",
+              "contribution": 0.012209048024314963
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "97",
+              "reference_value": "48",
+              "contribution": -0.007582905603153799
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Facilities Supplies",
+              "reference_value": "Clinical Equipment Parts",
+              "contribution": -0.00590423072379015
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "16",
+              "reference_value": "14",
+              "contribution": 0.003232668903699748
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "37",
+              "reference_value": "27",
+              "contribution": 0.0007661796491616251
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 8.673617379884035e-18
+            }
+          ],
+          "row_index_in_sample": 224,
+          "PO_ID": "14653",
+          "Review_Date": "2026-04-09"
+        },
+        {
+          "baseline_reference_prediction": 0.10810618975704675,
+          "prediction": 0.13673037089632328,
+          "contribution_sum": 0.028624181139276523,
+          "reconstruction_error": 0.0,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "23",
+              "reference_value": "48",
+              "contribution": 0.02522451255034798
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Diagnostic Supplies",
+              "reference_value": "Clinical Equipment Parts",
+              "contribution": -0.024429400839204238
+            },
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.08695652",
+              "reference_value": "0.04166667",
+              "contribution": 0.019462392790418635
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "3",
+              "reference_value": "2",
+              "contribution": 0.008412748169469256
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "74",
+              "reference_value": "27",
+              "contribution": -0.0012983650058169052
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "12",
+              "reference_value": "14",
+              "contribution": 0.0012522934740617948
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Distributor",
+              "reference_value": "Distributor",
+              "contribution": -7.37257477290143e-18
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 3.469446951953614e-18
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "3",
+              "reference_value": "3",
+              "contribution": 2.6020852139652106e-18
+            }
+          ],
+          "row_index_in_sample": 449,
+          "PO_ID": "23009",
+          "Review_Date": "2026-03-12"
+        },
+        {
+          "baseline_reference_prediction": 0.10810618975704674,
+          "prediction": 0.1749668424929238,
+          "contribution_sum": 0.06686065273587707,
+          "reconstruction_error": 2.7755575615628914e-17,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.17647059",
+              "reference_value": "0.04166667",
+              "contribution": 0.08035234283675496
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Manufacturer",
+              "reference_value": "Distributor",
+              "contribution": -0.018186020404623887
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "9",
+              "reference_value": "14",
+              "contribution": 0.01582966395399154
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "9",
+              "reference_value": "3",
+              "contribution": -0.010319733389682161
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Medical Consumables",
+              "reference_value": "Clinical Equipment Parts",
+              "contribution": -0.004994358423309723
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "18",
+              "reference_value": "27",
+              "contribution": 0.003875848950705734
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "17",
+              "reference_value": "48",
+              "contribution": 0.0004948533820315036
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "4",
+              "reference_value": "2",
+              "contribution": -0.00019194416999090275
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 7.806255641895632e-18
+            }
+          ],
+          "row_index_in_sample": 674,
+          "PO_ID": "18238",
+          "Review_Date": "2026-04-16"
+        },
+        {
+          "baseline_reference_prediction": 0.10810618975704675,
+          "prediction": 0.2813363432655119,
+          "contribution_sum": 0.1732301535084651,
+          "reconstruction_error": -5.551115123125783e-17,
+          "attribution_method": "Monte Carlo permutation-path Shapley approximation against one fixed reference row; not TreeSHAP",
+          "contributions": [
+            {
+              "feature": "Supplier_Late_Rate_90d",
+              "observed_value": "0.23076923",
+              "reference_value": "0.04166667",
+              "contribution": 0.13446055931824497
+            },
+            {
+              "feature": "Review_Month",
+              "observed_value": "1",
+              "reference_value": "2",
+              "contribution": 0.019162560511004626
+            },
+            {
+              "feature": "Planned_Lead_Days",
+              "observed_value": "18",
+              "reference_value": "14",
+              "contribution": 0.01904651520325145
+            },
+            {
+              "feature": "Supplier_Type",
+              "observed_value": "Manufacturer",
+              "reference_value": "Distributor",
+              "contribution": 0.01587683778998812
+            },
+            {
+              "feature": "Supplier_Completed_90d",
+              "observed_value": "39",
+              "reference_value": "48",
+              "contribution": -0.013146955629102255
+            },
+            {
+              "feature": "Item_Category",
+              "observed_value": "Diagnostic Supplies",
+              "reference_value": "Clinical Equipment Parts",
+              "contribution": 0.012011495141850528
+            },
+            {
+              "feature": "Days_To_Promise",
+              "observed_value": "11",
+              "reference_value": "3",
+              "contribution": -0.010179461741944134
+            },
+            {
+              "feature": "Order_Quantity",
+              "observed_value": "96",
+              "reference_value": "27",
+              "contribution": -0.004001397084828186
+            },
+            {
+              "feature": "Supplier_History_Missing",
+              "observed_value": "0",
+              "reference_value": "0",
+              "contribution": 9.974659986866641e-18
+            }
+          ],
+          "row_index_in_sample": 899,
+          "PO_ID": "7949",
+          "Review_Date": "2026-01-29"
+        }
+      ],
+      "mean_absolute_reconstruction_error": 3.053113317719181e-17,
+      "caveats": [
+        "Global permutation importance is correlated-feature-sensitive and not causal.",
+        "Local contributions use one sampled reference row and finite random permutation paths, not a population-background SHAP baseline.",
+        "Synthetic retrospective targets do not establish real-world accuracy.",
+        "Explanation calculations use validation data only, not independent test data."
+      ],
+      "model_sha256": "99103fdf772ba131ad90d15b7d7e8bbee44c24e558acc252bdd9fd9efe020b88"
+    }
+  },
+  "method_note": "Permutation importance on validation MAE; local reference-row permutation-path Shapley approximations.",
+  "kpi1_input_sha256": "2ef079930ef81f023c28926370469f84222e77867c60526abdd12ee04ae3af15"
+}

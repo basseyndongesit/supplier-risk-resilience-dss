@@ -1,0 +1,199 @@
+{
+  "source_project": "Supplier Risk DSS research project",
+  "release_directory": "GitHub repository root",
+  "approved_hashes": {
+    "supplier_risk_output/supplier_risk.db": "0c2bb19febb7f2a4ad9d2ab6a642450b1861021a283523eda44c5fec8e4f6573",
+    "predictive_model_output/random_forest.joblib": "99103fdf772ba131ad90d15b7d7e8bbee44c24e558acc252bdd9fd9efe020b88",
+    "w10_2b_model_output/kpi2_shortage_validation_selected.joblib": "014edabd936c91f67a842e34485b5ffb1ba09af2b522d0eef8eca2e8351e39ad",
+    "w10_2b_model_output/kpi3_emergency_premium_validation_selected.joblib": "e8b86ead4bdc2040642a88a0eb0993f35d30438231d7bf222f3a3955d2400013"
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 121,
+      "sha256": "2d59d2850c1d31f352e790f39ef5fec0f93816fc81930d0229ff740d7c663237"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 313,
+      "sha256": "48105f82cbcbe3817242d494b2d33fd3b1501412334edc32b1138be40628c88c"
+    },
+    {
+      "path": "app_w10_4b.py",
+      "bytes": 17029,
+      "sha256": "08e50d53ef098603a3433e3a111ad77680ceb8ebcae82bc2426089a87223386f"
+    },
+    {
+      "path": "build_kpi_dataset_w10_2a.py",
+      "bytes": 11978,
+      "sha256": "d9cf9cb9c01868152f05fa3f0fc349d3ed94e70b1c14796ce4de5d99fb87de1f"
+    },
+    {
+      "path": "docs/DATA_SHARING.md",
+      "bytes": 1107,
+      "sha256": "82f5807ca6c0b8cb026d94b6d82dbc390600409efb47f619e4b05ee76ce40e57"
+    },
+    {
+      "path": "docs/RELEASE_VERIFICATION.md",
+      "bytes": 1639,
+      "sha256": "8ce0981245164524c5b41ecbbc9212104a1bdd35afe6d7e1a7ab477c086e977e"
+    },
+    {
+      "path": "dss_core.py",
+      "bytes": 5054,
+      "sha256": "2d33b1532402544a2ac8e881c9f34fc56ed5bc23a6e16f40ca488225c18a026d"
+    },
+    {
+      "path": "predictive_model_lock/model_lock_manifest.json",
+      "bytes": 2872,
+      "sha256": "801e9789edceca67573890333de2f6a9461fed0339ee9e9598525afd799eaf4d"
+    },
+    {
+      "path": "predictive_model_output/random_forest.joblib",
+      "bytes": 27919835,
+      "sha256": "99103fdf772ba131ad90d15b7d7e8bbee44c24e558acc252bdd9fd9efe020b88"
+    },
+    {
+      "path": "predictive_risk_3c2.py",
+      "bytes": 5447,
+      "sha256": "b14a8dd0f69b481f840d79c9a4688c0225817033edf2e0d664ebaf07c9d7974a"
+    },
+    {
+      "path": "predictive_whatif_3c3.py",
+      "bytes": 3049,
+      "sha256": "8866b63440db18a6df3adff474db11f493510440983a6c3c5200f64ec3b18593"
+    },
+    {
+      "path": "Progress Report.docx",
+      "bytes": 18108,
+      "sha256": "db12810d435c402610f818265fe2efbf3ef1e886cea53456fc7917807b1cd8fc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6629,
+      "sha256": "13becf0ed4defd3c7759322e33347e99608957ab63d345742d36d76d0675c0c3"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 97,
+      "sha256": "10197550573dbd74ad5babe07d9bcec26f1a7421d479c46f7938e390e8dfeca2"
+    },
+    {
+      "path": "supplier_risk_output/supplier_risk.db",
+      "bytes": 158695424,
+      "sha256": "0c2bb19febb7f2a4ad9d2ab6a642450b1861021a283523eda44c5fec8e4f6573"
+    },
+    {
+      "path": "test_w10_3b3b_on_demand.py",
+      "bytes": 1363,
+      "sha256": "f0b65b380ea141e29655700dc04c4542ed7a6797cca7055a928aa24ccb72e0c4"
+    },
+    {
+      "path": "test_w10_3b4.py",
+      "bytes": 1848,
+      "sha256": "b3eb22e1e9129614e3d4db74cd3da086db6c58dc52ce52203ebed0b144dfa4b5"
+    },
+    {
+      "path": "test_w10_4b.py",
+      "bytes": 2496,
+      "sha256": "8debf891063a88d0c4875aa35c18fd594230b90355fbc4cce6b2d6d1e15d17f7"
+    },
+    {
+      "path": "w10_2a_dataset_output/validation.csv",
+      "bytes": 3736041,
+      "sha256": "437f39ee48abcb9e4d383d13803cdf81c304c7944e24b3c1b8959e89125c74c5"
+    },
+    {
+      "path": "w10_2b_model_output/kpi2_shortage_validation_selected.joblib",
+      "bytes": 8549465,
+      "sha256": "014edabd936c91f67a842e34485b5ffb1ba09af2b522d0eef8eca2e8351e39ad"
+    },
+    {
+      "path": "w10_2b_model_output/kpi3_emergency_premium_validation_selected.joblib",
+      "bytes": 180374,
+      "sha256": "e8b86ead4bdc2040642a88a0eb0993f35d30438231d7bf222f3a3955d2400013"
+    },
+    {
+      "path": "w10_2b_model_output/w10_2b_validation_report.json",
+      "bytes": 19410,
+      "sha256": "87e74a2b9bef169a1588b115d33a8bdd8c877b2a8360320235403a13994be781"
+    },
+    {
+      "path": "w10_2c_test_output/w10_2c_independent_test_report.json",
+      "bytes": 21643,
+      "sha256": "27a6d7436598027f98f751d94ca60b5819039fb41996e6ac1fb3e8a55c0bec63"
+    },
+    {
+      "path": "w10_3a_explainability_output/w10_3a_explainability_report.json",
+      "bytes": 62023,
+      "sha256": "161243f71ecbd294d1fa7d486dd5b5513e681d35b9b7ca4321b3b1d031b5ec9f"
+    },
+    {
+      "path": "w10_3b2a_live_features.py",
+      "bytes": 6996,
+      "sha256": "83dc0f6d90326b192da76d88b04f03988aad6906185247c88d1ffb1e4790d52e"
+    },
+    {
+      "path": "w10_3b2a_score_frozen.py",
+      "bytes": 6414,
+      "sha256": "a069780ea63edef91beeb0eade849cda8e4a01ffca95638ed46ca15c7fb5e05b"
+    },
+    {
+      "path": "w10_3b2b_dashboard.py",
+      "bytes": 13373,
+      "sha256": "2231bacac825698ad71a2579cc59215fe68a44a4306f0975dd5dede78754e10e"
+    },
+    {
+      "path": "w10_3b3_local_explain.py",
+      "bytes": 8394,
+      "sha256": "7f1847b9a9f0391ee1fe111cc92a7b2aaae4bf70df375c8da897c617b6802172"
+    },
+    {
+      "path": "w10_3b3b_dashboard.py",
+      "bytes": 13476,
+      "sha256": "36d0111aa60f03db17ef87586e0f09944cbc58b1fab7c906e5b9377cb0f80d14"
+    },
+    {
+      "path": "w10_3b3b_live_ui.py",
+      "bytes": 9979,
+      "sha256": "05ccbcd02a3358e888827a4e23c5b2cd869625a0e4fa4cd53d089724434d5574"
+    },
+    {
+      "path": "w10_3b4_dashboard.py",
+      "bytes": 13476,
+      "sha256": "8bc5cbe0b4212be9c6d64c91e0b8a044f3001f5035f280164a0d22c1b6ee56c0"
+    },
+    {
+      "path": "w10_3b4_decision_summary.py",
+      "bytes": 2425,
+      "sha256": "63307c214be1c49aee189dc90bb81640b62ddcce0af812c20016b971b579e59e"
+    },
+    {
+      "path": "w10_3b_explainability.py",
+      "bytes": 6528,
+      "sha256": "131d36c62d4bf42c25c479fff686573297fdf34aa9faaf44674686c7a2bd6313"
+    },
+    {
+      "path": "w10_4b_whatif.py",
+      "bytes": 10281,
+      "sha256": "19f5a2137528f573cb80a8bb097a63fd9d5f106202e4a843b7b4926a0da84333"
+    },
+    {
+      "path": "w10_4c_local_verification.json",
+      "bytes": 4693,
+      "sha256": "1e247a206ee86d76569f8d7ba52aaed78084c50cb379e385e0db0eb3568aa18c"
+    },
+    {
+      "path": "w10_4c_verify.py",
+      "bytes": 3703,
+      "sha256": "f7dcdfa739b1dd8d5f9d4e51abc1126e0a8600bb50411d3ab4ac2fdb6718554c"
+    },
+    {
+      "path": "w10_5_release_check_results.json",
+      "bytes": 4052,
+      "sha256": "1be3bc2d4aa24144760000b53d7942d554e64243196a7b339a8ec7edf3bd7534"
+    }
+  ],
+  "status": "GITHUB_PUBLICATION_PENDING",
+  "caveat": "Local validation completed. Public GitHub access and fresh-clone Git LFS retrieval remain to be verified."
+}
