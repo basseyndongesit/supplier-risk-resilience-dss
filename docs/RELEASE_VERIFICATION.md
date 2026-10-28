@@ -8,7 +8,7 @@
 - Clean-environment dependency installation: PASS
 - Nine-screen Streamlit runtime testing: PASS
 - Four approved core artifact SHA256 checks: PASS
-- Release manifest verification: 35/35 PASS
+- Release manifest verification: 37/37 PASS
 - Decision_Records table: 0 rows
 - Git LFS configured for the SQLite database and three models
 
@@ -47,4 +47,12 @@ Do not publish decision_records_local.db or human decision records.
 ## Publication status
 
 Local validation completed.
-GitHub publication and external access verification pending.
+GitHub publication completed successfully.
+Repository: https://github.com/basseyndongesit/supplier-risk-resilience-dss
+Published release commit: 82a8b5e0f2732d20eab43da556d69bb2aae1bbd7
+Git LFS upload: 4/4 assets successful.
+Fresh-clone retrieval: 4/4 assets successful.
+SHA-256 verification: 4/4 assets PASS.
+Fresh-clone working directory: clean.
+Public access without signing in: confirmed.
+The initial clone reported a security warning involving the standard Git LFS post-checkout hook. Subsequent working-tree and asset-integrity checks passed.

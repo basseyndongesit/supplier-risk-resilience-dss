@@ -35,8 +35,8 @@
     },
     {
       "path": "docs/RELEASE_VERIFICATION.md",
-      "bytes": 1639,
-      "sha256": "8ce0981245164524c5b41ecbbc9212104a1bdd35afe6d7e1a7ab477c086e977e"
+      "bytes": 2126,
+      "sha256": "4c130ee7931c52267a42129749645b1246a592cd24586107d1f57fe75354c0d4"
     },
     {
       "path": "dss_core.py",
@@ -70,8 +70,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6629,
-      "sha256": "13becf0ed4defd3c7759322e33347e99608957ab63d345742d36d76d0675c0c3"
+      "bytes": 6739,
+      "sha256": "9b48c958659cf2d4730f28bc88f445e131d9e0ebb4920d40c08536e8e9c96ee6"
     },
     {
       "path": "requirements.txt",
@@ -194,6 +194,6 @@
       "sha256": "1be3bc2d4aa24144760000b53d7942d554e64243196a7b339a8ec7edf3bd7534"
     }
   ],
-  "status": "GITHUB_PUBLICATION_PENDING",
-  "caveat": "Local validation completed. Public GitHub access and fresh-clone Git LFS retrieval remain to be verified."
+  "status": "GITHUB_PUBLICATION_VERIFIED",
+  "caveat": "Public repository access and fresh-clone retrieval of all four Git LFS assets verified. Research and model limitations remain as documented."
 }

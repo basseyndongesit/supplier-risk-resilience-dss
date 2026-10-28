@@ -60,7 +60,7 @@ Global feature importance and local reference-based sampled feature contribution
 - Staged application browser retest: project owner confirmed Screens 5, 6 (KPI 1 what-if), and 8 (on-demand explanation) worked after adding the model-lock manifest and validation reference CSV.
 - Release hygiene scan: no local decision database, `__pycache__`, `.pyc`, or virtual-environment files detected at the time of the reported check.
 
-The project owner subsequently confirmed a successful clean-environment installation and nine-screen runtime test. External GitHub access remains subject to publication verification. To rerun the included regression tests from the release root:
+The project owner subsequently confirmed a successful clean-environment installation and nine-screen runtime test. Public GitHub access, fresh-clone retrieval, and SHA-256 verification of all four Git LFS assets have been completed successfully. To rerun the included regression tests from the release root:
 
 ```powershell
 python -m unittest -v test_w10_4b test_w10_3b4 test_w10_3b3b_on_demand
@@ -75,4 +75,4 @@ python -m unittest -v test_w10_4b test_w10_3b4 test_w10_3b3b_on_demand
 - Human decisions are recorded separately in a local companion database (`decision_records_local.db`) created at runtime. **Do not publish that database** or real decision records.
 
 ## Submission readiness
-Before publishing the GitHub repository, complete the final Git staging and manifest verification checks. Local dependency installation, nine-screen application testing, synthetic-data sharing authorization, and the decision-record exclusion check have been completed. After publication, verify public access and confirm that a fresh clone retrieves all Git LFS assets.
+The research prototype has been published at https://github.com/basseyndongesit/supplier-risk-resilience-dss. Public access without signing in was confirmed. A fresh clone retrieved all four Git LFS assets, and their SHA-256 hashes matched the approved release. Local dependency installation, nine-screen application testing, synthetic-data sharing authorization, and decision-record exclusion checks were completed.
