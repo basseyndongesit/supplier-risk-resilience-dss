@@ -1,5 +1,11 @@
 # Supplier Risk & Resilience Decision Support System
 
+## Evaluation Report
+
+**[Week 11 Evaluation Report ? Model Validation and Application Testing](WEEK_11_EVALUATION_REPORT.md)**
+
+This report documents the evaluation design, data-leakage checks, model performance and baseline comparisons, attempted improvements, final model-selection decisions, developer-led application testing, and remaining limitations.
+
 **Nine-screen research prototype | Synthetic healthcare procurement data | Human-in-the-loop**
 
 ## Research report and application demonstration
