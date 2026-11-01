@@ -1,0 +1,40 @@
+{
+  "checkpoint": "W11.2-31",
+  "status": "VALIDATION_SELECTION_DOCUMENTED",
+  "evaluation_partition": "validation",
+  "validation_rows": 27198,
+  "scenario_groups": 9066,
+  "scenario_delays_days": [
+    3,
+    5,
+    7
+  ],
+  "kpi2": {
+    "original_mae": 1.5768210648349248,
+    "revised_mae": 1.577787611,
+    "original_monotonicity_violations": 726,
+    "revised_monotonicity_violations": 0,
+    "selected_method": "Frozen random forest with cumulative-maximum correction",
+    "selection_reason": "Eliminates scenario-order inconsistencies with negligible validation MAE increase"
+  },
+  "kpi3": {
+    "original_direct_mae": 46.63839766,
+    "revised_chained_monotonic_mae": 20.923327716,
+    "validation_mae_reduction_percent": 55.14,
+    "revised_monotonicity_violations": 0,
+    "selected_method": "Corrected predicted shortage multiplied by nonnegative unit-cost premium",
+    "selection_reason": "Lower validation MAE and nondecreasing predictions for fixed premium"
+  },
+  "limitations": [
+    "Targets are synthetic simulator outputs, not observed operational outcomes.",
+    "The chained KPI3 method reflects the simulator's shortage-times-premium cost structure.",
+    "Historical availability of emergency replacement prices is an assumption, not independently timestamp-verified.",
+    "Validation selection does not establish performance on unseen real-world procurement data.",
+    "No causal interpretation or automatic procurement decision is authorized."
+  ],
+  "evidence_sha256": {
+    "scoring_module": "df239f5ee47b7f739426bf8d3c9d22ff2342185cd8cd18bdb5a79181adfbb65e",
+    "validation_dataset": "437f39ee48abcb9e4d383d13803cdf81c304c7944e24b3c1b8959e89125c74c5"
+  },
+  "final_test_accessed_in_week11": false
+}

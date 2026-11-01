@@ -1,4 +1,33 @@
-﻿# GitHub Release Verification
+# GitHub Release Verification
+
+## Current application verification
+
+The current nine-screen application uses `app_w11.py` as its entry point.
+
+### Development-validation evidence
+
+- KPI 1: Original frozen random forest retained after the calibration candidate did not improve validation metrics.
+- KPI 2: Cumulative-maximum correction selected; scenario-order violations reduced from 726 to 0.
+- KPI 3: Chained premium method selected; development-validation MAE reduced from 46.6384 to 20.9233 currency units.
+- Development-validation evidence: `evaluation/kpi1_validation_consolidated.json` and `evaluation/kpi23_validation_selection.json`.
+- Approved report: `docs/MODEL_EVALUATION_REPORT.md`.
+- Independent final-test partition: not accessed during the current development-validation work.
+
+### Application checks
+
+- Python compilation and module-integration checks completed.
+- Developer-led interactive review of Screens 6, 7, and 8 completed.
+- No independent participant usability study has been completed.
+- The revised KPI 2 and KPI 3 methods have not undergone independent final-test evaluation.
+- The historical release manifest and original application modules remain preserved.
+
+### Current application startup
+
+From the repository root, with dependencies installed:
+
+    python -m streamlit run app_w11.py
+
+The historical release verification and publication records below remain applicable to the earlier release. They do not constitute a new publication or fresh-clone verification of the current application.
 
 ## Completed local validation
 
