@@ -13,7 +13,7 @@ REPORT_NAMES = (
 
 
 def load_reports(workspace):
-    folder = Path(workspace) / "evaluation"
+    folder = Path(workspace) / "validation"
     reports = []
 
     for filename in REPORT_NAMES:
@@ -42,7 +42,7 @@ def load_reports(workspace):
         raise ValueError("Unexpected final-test access declaration")
 
     if kpi23.get("evaluation_partition") != "validation":
-        raise ValueError("Unexpected evaluation partition")
+        raise ValueError("Unexpected validation partition")
 
     return kpi1, kpi23
 

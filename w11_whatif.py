@@ -1,4 +1,4 @@
-"""Week 11 what-if UI. Isolated copy for validation-selected improvements."""
+﻿"""Week 11 what-if UI. Isolated copy for validation-selected improvements."""
 import os
 import numpy as np
 import pandas as pd
@@ -76,8 +76,8 @@ def narrative(kpi, changes, baseline, updated, unit):
 def render(db, queue, review_date, selected):
  st.subheader('Interactive What-If Prediction')
  st.caption('Explore how changes to planning assumptions affect the predicted results for this purchase order.')
- choice=st.radio('Choose predictive model', ['KPI 1 — Late-delivery risk','KPI 2 — Incremental shortage','KPI 3 — Direct emergency premium'],horizontal=True)
- kpi=choice.split(' ')[1].lower()
+ choice=st.radio('Choose predictive model', ['KPI 1: Late-delivery risk','KPI 2: Incremental shortage','KPI 3: Direct emergency premium'],horizontal=True)
+ kpi=choice.split(' ')[1].rstrip(':').lower()
  if kpi=='1':
   _render_kpi1(db,queue,review_date,selected)
  else:
@@ -317,7 +317,7 @@ def render_week11_scenario_panel(frame, kpi):
         st.dataframe(
             display.round(2),
             hide_index=True,
-            use_container_width=True,
+            width="stretch",
         )
 
         revised_values = result[revised].to_numpy(dtype=float)
@@ -457,7 +457,7 @@ def _render_regression(db, review_date, selected, kpi):
     st.dataframe(
         comparison.round(2),
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
     )
 
     selected_row = comparison.loc[
@@ -524,3 +524,4 @@ def _render_regression(db, review_date, selected, kpi):
             "Changing these assumptions does not automatically "
             "change the actual purchase order."
         )
+

@@ -1,0 +1,54 @@
+{
+  "checkpoint": "W11.1-25",
+  "status": "KPI1_VALIDATION_CONSOLIDATED",
+  "kpi": "Late-delivery probability",
+  "selected_model": "Original frozen random forest",
+  "selection_basis": "Existing validation partition",
+  "original_validation_metrics": {
+    "roc_auc": 0.6200909577314071,
+    "pr_auc": 0.3299528473837363,
+    "brier": 0.17273145256579078,
+    "log_loss": 0.5259449724477396,
+    "mean_probability": 0.24015188759355266
+  },
+  "calibration_experiment": {
+    "development_cutoff": "2025-08-31",
+    "model_fit_rows": 20372,
+    "calibration_rows": 7465,
+    "excluded_crossover_pos": 197,
+    "candidate_validation_metrics": {
+      "roc_auc": 0.6155027369634112,
+      "pr_auc": 0.32516445451189535,
+      "brier": 0.1735231486862485,
+      "log_loss": 0.5281845957003584,
+      "mean_probability": 0.2216389199976205
+    },
+    "decision": "REJECT_CANDIDATE",
+    "reason": "Candidate did not outperform original frozen random forest on validation ROC-AUC, PR-AUC, Brier score, or log loss."
+  },
+  "supplier_history": {
+    "training_missing_rows": 5,
+    "training_missing_unique_pos": 4,
+    "validation_missing_rows": 0,
+    "missing_rate_convention": "Undefined historical late rate represented as NaN when completed-delivery count is zero.",
+    "feature_consistency": "PASS",
+    "missing_history_predictive_reliability": "NOT_EVALUABLE"
+  },
+  "limitations": [
+    "Synthetic outcomes do not establish real-world performance.",
+    "Repeated PO reviews introduce within-PO dependence.",
+    "Outcome-maturity filtering may introduce selection bias.",
+    "ROC-AUC indicates limited ranking discrimination.",
+    "Probability calibration is imperfect in higher-risk deciles.",
+    "Missing-history cases are absent from validation.",
+    "No operational classification threshold has been approved.",
+    "No final-test-based model selection was performed."
+  ],
+  "evidence_sha256": {
+    "training_data": "8266e0cad5be89330bbfab4688025eb529e9a9e59ef859a540f28c8d255b1cea",
+    "validation_data": "2ef079930ef81f023c28926370469f84222e77867c60526abdd12ee04ae3af15",
+    "development_split_manifest": "d865f76b3d1ee73a9c87c5506516a46629342679ba7491d90247a31b29458b75",
+    "calibration_experiment": "98962b730edee3c8be6b950d28905c4a28ada57f8c6677dc54fe87d54e0d7cab"
+  },
+  "final_test_accessed_in_week11": false
+}
