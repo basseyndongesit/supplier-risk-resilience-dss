@@ -1,0 +1,57 @@
+{
+  "scope": "Independent deterministic unit tests of Week 11 scenario scoring logic (NOT actual model performance, database reconciliation, or UI)",
+  "timestamp_utc": "2026-11-10T06:24:49.539494+00:00",
+  "repository_path": "/mnt/data/week12_work/supplier-risk-resilience-dss-week11-model-validation",
+  "tests": [
+    {
+      "test": "Independent arithmetic: monotonic correction, chained cost and deltas",
+      "status": "PASS"
+    },
+    {
+      "test": "Negative predictions are floored at zero",
+      "status": "PASS"
+    },
+    {
+      "test": "Input frame not mutated",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject incomplete scenario group",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject incorrect delay set",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject mixed purchase orders",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject changing premium across scenarios",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject negative unit premium",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject nonfinite unit premium",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject missing feature",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject nonfinite predictions",
+      "status": "PASS"
+    },
+    {
+      "test": "Reject nonfinite direct cost predictions",
+      "status": "PASS"
+    }
+  ],
+  "pass_count": 12,
+  "fail_count": 0
+}

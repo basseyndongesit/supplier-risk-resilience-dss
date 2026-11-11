@@ -1,0 +1,76 @@
+{
+  "test_partition_status": "RECONSTRUCTED_NOT_HASH_IDENTICAL",
+  "test_rows": 29160,
+  "test_unique_pos": 5392,
+  "test_date_range": [
+    "2026-05-28",
+    "2026-10-09"
+  ],
+  "sklearn_runtime": "1.8.0",
+  "sklearn_training": "1.9.1",
+  "original_report_test_sha256": "0790c669064d5cc1f3e7b2a3c918618219eb5ff6a7500f9997a34c0d8",
+  "reconstructed_test_sha256": "f968e7e6cb7263cc7cbecd6425d4c14929b142c308ae2e615c88257c93e9a7ae",
+  "original_models_sha256_match": true,
+  "kpi2_original": {
+    "mae": 1.636574407833098,
+    "rmse": 9.497639990206904,
+    "bias": -0.1910747358710998,
+    "p90_abs_error": 2.679320663423687,
+    "positive_only_mae": 4.6119717556474065
+  },
+  "kpi2_revised": {
+    "mae": 1.6381421840658656,
+    "rmse": 9.497978836742512,
+    "bias": -0.18949203850924204,
+    "p90_abs_error": 2.68575058780167,
+    "positive_only_mae": 4.611940459113954
+  },
+  "kpi3_original_direct": {
+    "mae": 38.06223128620719,
+    "rmse": 274.0915809926773,
+    "bias": -0.9106787005719186,
+    "p90_abs_error": 65.45567517238409,
+    "positive_only_mae": 105.08115159843011
+  },
+  "kpi3_original_chained": {
+    "mae": 19.329345398274434,
+    "rmse": 183.9009274692148,
+    "bias": -2.96619618310496,
+    "p90_abs_error": 19.465856144759844,
+    "positive_only_mae": 56.08735634896488
+  },
+  "kpi3_revised_chained": {
+    "mae": 19.352696387200307,
+    "rmse": 183.91496744132502,
+    "bias": -2.9425312536230366,
+    "p90_abs_error": 19.522906934469038,
+    "positive_only_mae": 56.086689622729466
+  },
+  "kpi2_original_order_violations": 685,
+  "kpi2_revised_order_violations": 0,
+  "warnings": [
+    "Trying to unpickle estimator ColumnTransformer from version 1.9.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator DecisionTreeRegressor from version 1.9.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator HistGradientBoostingRegressor from version 1.9.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator MissingIndicator from version 1.9.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator OneHotEncoder from version 1.9.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator Pipeline from version 1.9.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator RandomForestRegressor from version 1.9.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations",
+    "Trying to unpickle estimator SimpleImputer from version 1.9.1 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:\nhttps://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations"
+  ],
+  "delay_3": {
+    "n": 9720,
+    "kpi2_revised_mae": 1.035124270745031,
+    "kpi3_revised_mae": 12.297833742491378
+  },
+  "delay_5": {
+    "n": 9720,
+    "kpi2_revised_mae": 1.535045256483791,
+    "kpi3_revised_mae": 18.582662940255165
+  },
+  "delay_7": {
+    "n": 9720,
+    "kpi2_revised_mae": 2.3442570249687753,
+    "kpi3_revised_mae": 27.177592478854383
+  }
+}

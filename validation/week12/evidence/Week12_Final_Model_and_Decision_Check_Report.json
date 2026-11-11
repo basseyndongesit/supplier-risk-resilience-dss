@@ -1,0 +1,38 @@
+{
+  "scope": "GitHub ZIP asset readiness plus isolated SQLite schema tests; NOT a final model evaluation or interactive UI test",
+  "checks": [
+    {
+      "test": "Asset usable: w10_2b_model_output/kpi2_shortage_validation_selected.joblib",
+      "status": "BLOCKED",
+      "detail": "Git LFS pointer only; real binary not included in ZIP"
+    },
+    {
+      "test": "Asset usable: w10_2b_model_output/kpi3_emergency_premium_validation_selected.joblib",
+      "status": "BLOCKED",
+      "detail": "Git LFS pointer only; real binary not included in ZIP"
+    },
+    {
+      "test": "Asset usable: supplier_risk_output/supplier_risk.db",
+      "status": "BLOCKED",
+      "detail": "Git LFS pointer only; real binary not included in ZIP"
+    },
+    {
+      "test": "Decision insert and retrieval",
+      "status": "PASS",
+      "detail": "One record inserted and retrieved with all fields"
+    },
+    {
+      "test": "Duplicate PO/review rejection",
+      "status": "PASS",
+      "detail": "Composite primary key rejected duplicate"
+    },
+    {
+      "test": "Null PO rejection",
+      "status": "PASS",
+      "detail": "NOT NULL constraint enforced"
+    }
+  ],
+  "passed": 3,
+  "blocked": 3,
+  "next_action": "Obtain actual Git LFS binaries via git lfs pull in a full clone; rerun frozen final-model tests using test partition and then UI save/retrieve test."
+}

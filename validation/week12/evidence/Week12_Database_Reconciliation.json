@@ -1,0 +1,119 @@
+{
+  "source": "uploaded supplier_risk.db",
+  "scope": "synthetic simulator assessments only, not model predictions or UI",
+  "rows": 146766,
+  "groups": 48922,
+  "checks": {
+    "shortage_arithmetic": {
+      "tested": 146766,
+      "violations": 0,
+      "status": "PASS",
+      "examples": []
+    },
+    "emergency_premium_arithmetic": {
+      "tested": 146766,
+      "violations": 0,
+      "status": "PASS",
+      "examples": []
+    },
+    "screening_flag_group": {
+      "tested": 146766,
+      "violations": 0,
+      "status": "PASS",
+      "examples": []
+    },
+    "complete_scenario_group": {
+      "tested": 48922,
+      "violations": 0,
+      "status": "PASS",
+      "examples": []
+    },
+    "constant_baseline": {
+      "tested": 48922,
+      "violations": 0,
+      "status": "PASS",
+      "examples": []
+    },
+    "nondecreasing_simulated_shortage": {
+      "tested": 48922,
+      "violations": 0,
+      "status": "PASS",
+      "examples": []
+    },
+    "consistent_flag_group": {
+      "tested": 48922,
+      "violations": 0,
+      "status": "PASS",
+      "examples": []
+    }
+  },
+  "walkthrough_candidates": [
+    {
+      "scenario": "typical",
+      "PO_ID": 4,
+      "Review_Date": "2024-12-26",
+      "Supplier_ID": 54,
+      "Item_ID": 1,
+      "Location_ID": 1,
+      "Criticality_Class": "Low",
+      "Baseline_Unmet_Demand_Units": 5.33333,
+      "Management_Review_Flag": 1,
+      "delays": [
+        {
+          "days": 3,
+          "delayed_unmet": 13.93333,
+          "incremental_shortage": 8.6,
+          "emergency_premium": 17.2
+        },
+        {
+          "days": 5,
+          "delayed_unmet": 19.66667,
+          "incremental_shortage": 14.33334,
+          "emergency_premium": 28.67
+        },
+        {
+          "days": 7,
+          "delayed_unmet": 25.4,
+          "incremental_shortage": 20.06667,
+          "emergency_premium": 40.13
+        }
+      ]
+    },
+    {
+      "scenario": "challenging",
+      "PO_ID": 913,
+      "Review_Date": "2024-11-28",
+      "Supplier_ID": 40,
+      "Item_ID": 7,
+      "Location_ID": 1,
+      "Criticality_Class": "High",
+      "Baseline_Unmet_Demand_Units": 21.0,
+      "Management_Review_Flag": 1,
+      "delays": [
+        {
+          "days": 3,
+          "delayed_unmet": 26.0,
+          "incremental_shortage": 5.0,
+          "emergency_premium": 69.55
+        },
+        {
+          "days": 5,
+          "delayed_unmet": 29.33333,
+          "incremental_shortage": 8.33333,
+          "emergency_premium": 115.92
+        },
+        {
+          "days": 7,
+          "delayed_unmet": 32.66667,
+          "incremental_shortage": 11.66667,
+          "emergency_premium": 162.28
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Simulation-derived values do not establish predictive-model accuracy.",
+    "Database reconciliation does not establish displayed UI values or user comprehension.",
+    "Proposed actions are illustrative, not observed management decisions."
+  ]
+}

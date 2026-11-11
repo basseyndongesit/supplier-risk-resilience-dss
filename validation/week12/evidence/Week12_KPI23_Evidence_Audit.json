@@ -1,0 +1,46 @@
+{
+  "scope": "Independent audit of saved report numbers and selection provenance; NOT a new inference run or final independent test of revised Week 11 scoring",
+  "sources": [
+    "supplier-risk-resilience-dss-week11-model-validation/w10_2c_test_output/w10_2c_independent_test_report.json",
+    "supplier-risk-resilience-dss-week11-model-validation/evaluation/kpi23_validation_selection.json"
+  ],
+  "historical_results": {
+    "kpi2_shortage": {
+      "historical_test_mae": 1.636574407833098,
+      "zero_baseline_mae": 7.736966181412895,
+      "improvement_vs_zero_percent": 78.85,
+      "historical_test_rows": 29160
+    },
+    "kpi3_emergency_premium": {
+      "historical_test_mae": 38.06223128620719,
+      "zero_baseline_mae": 93.29056378600822,
+      "improvement_vs_zero_percent": 59.2,
+      "historical_test_rows": 29160,
+      "historical_chained_comparator_mae": 19.329345398274434
+    }
+  },
+  "validation_selection": {
+    "kpi2_revised_mae": 1.577787611,
+    "kpi3_revised_mae": 20.923327716
+  },
+  "checks": {
+    "test_partition_not_used_for_selection": true,
+    "zero_po_overlap": true,
+    "week11_selection_uses_validation": true,
+    "week11_selection_reports_no_final_test_access": true,
+    "revised_kpi2_monotonic_violations_zero_on_validation": true,
+    "revised_kpi3_monotonic_violations_zero_on_validation": true,
+    "historical_kpi2_better_than_zero_baseline": true,
+    "historical_kpi3_better_than_zero_baseline": true
+  },
+  "checks_passed": 8,
+  "checks_total": 8,
+  "critical_gap": "Week 11 revised cumulative-maximum KPI2 and chained corrected KPI3 must be scored on frozen held-out test data; historical direct-model test metrics do not establish revised-method held-out performance.",
+  "limitations": [
+    "Targets are synthetic simulator outputs, not observed operational outcomes.",
+    "The chained KPI3 method reflects the simulator's shortage-times-premium cost structure.",
+    "Historical availability of emergency replacement prices is an assumption, not independently timestamp-verified.",
+    "Validation selection does not establish performance on unseen real-world procurement data.",
+    "No causal interpretation or automatic procurement decision is authorized."
+  ]
+}

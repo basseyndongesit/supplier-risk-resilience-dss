@@ -1,0 +1,163 @@
+{
+  "scope": "DSS core read-path versus SQLite, not a live browser/UI test",
+  "database": "supplier_risk.db",
+  "tests": 23,
+  "passed": 23,
+  "failed": 0,
+  "results": [
+    {
+      "test": "Database read-only integrity",
+      "status": "PASS",
+      "observed": "integrity_check",
+      "expected": "ok"
+    },
+    {
+      "test": "typical: queue includes PO",
+      "status": "PASS",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "test": "typical: scenario delays",
+      "status": "PASS",
+      "observed": [
+        3,
+        5,
+        7
+      ],
+      "expected": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "test": "typical: review flag",
+      "status": "PASS",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "test": "typical: queue max shortage",
+      "status": "PASS",
+      "observed": 20.06667,
+      "expected": 20.06667
+    },
+    {
+      "test": "typical: queue max premium",
+      "status": "PASS",
+      "observed": 40.13,
+      "expected": 40.13
+    },
+    {
+      "test": "typical: 3d shortage displayed-data",
+      "status": "PASS",
+      "observed": 8.6,
+      "expected": 8.6
+    },
+    {
+      "test": "typical: 3d premium displayed-data",
+      "status": "PASS",
+      "observed": 17.2,
+      "expected": 17.2
+    },
+    {
+      "test": "typical: 5d shortage displayed-data",
+      "status": "PASS",
+      "observed": 14.33334,
+      "expected": 14.33334
+    },
+    {
+      "test": "typical: 5d premium displayed-data",
+      "status": "PASS",
+      "observed": 28.67,
+      "expected": 28.67
+    },
+    {
+      "test": "typical: 7d shortage displayed-data",
+      "status": "PASS",
+      "observed": 20.06667,
+      "expected": 20.06667
+    },
+    {
+      "test": "typical: 7d premium displayed-data",
+      "status": "PASS",
+      "observed": 40.13,
+      "expected": 40.13
+    },
+    {
+      "test": "challenging: queue includes PO",
+      "status": "PASS",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "test": "challenging: scenario delays",
+      "status": "PASS",
+      "observed": [
+        3,
+        5,
+        7
+      ],
+      "expected": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "test": "challenging: review flag",
+      "status": "PASS",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "test": "challenging: queue max shortage",
+      "status": "PASS",
+      "observed": 11.66667,
+      "expected": 11.66667
+    },
+    {
+      "test": "challenging: queue max premium",
+      "status": "PASS",
+      "observed": 162.28,
+      "expected": 162.28
+    },
+    {
+      "test": "challenging: 3d shortage displayed-data",
+      "status": "PASS",
+      "observed": 5.0,
+      "expected": 5.0
+    },
+    {
+      "test": "challenging: 3d premium displayed-data",
+      "status": "PASS",
+      "observed": 69.55,
+      "expected": 69.55
+    },
+    {
+      "test": "challenging: 5d shortage displayed-data",
+      "status": "PASS",
+      "observed": 8.33333,
+      "expected": 8.33333
+    },
+    {
+      "test": "challenging: 5d premium displayed-data",
+      "status": "PASS",
+      "observed": 115.92,
+      "expected": 115.92
+    },
+    {
+      "test": "challenging: 7d shortage displayed-data",
+      "status": "PASS",
+      "observed": 11.66667,
+      "expected": 11.66667
+    },
+    {
+      "test": "challenging: 7d premium displayed-data",
+      "status": "PASS",
+      "observed": 162.28,
+      "expected": 162.28
+    }
+  ]
+}
