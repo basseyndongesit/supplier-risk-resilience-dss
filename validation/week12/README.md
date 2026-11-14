@@ -74,17 +74,34 @@ The underlying machine-readable development-validation evidence is retained in:
 The system supports three decisions: DR-01 identify purchase orders for management review; DR-02 compare delivery-delay scenarios; and DR-03 record a management response. Rule-based management-review flags and model-estimated late-delivery probabilities are different signals. Stored retrospective simulator outcomes are not observed losses or causal forecasts.
 
 ## Week 12–13 validation and submission evidence
-The November 2026 validation matrix contains **28 tests: 4 Pass, 22 Partial Pass, and 2 Not Tested**. Partial Pass denotes incomplete acceptance-criterion evidence, not necessarily a software failure. A targeted script reported **28/28 checks passed**; that result does **not** mean all 28 matrix tests passed.
+The November 2026 validation matrix contains **28 tests: 5 Pass, 21 Partial Pass, and 2 Not Tested**. Partial Pass denotes incomplete acceptance-criterion evidence, not necessarily a software failure. A targeted script reported **28/28 checks passed**; that result does **not** mean all 28 matrix tests passed.
 
 The updated supplier/item filters were demonstrated in Streamlit on 2026-10-09: Supplier 004 + Pharmacy Supplies Item 054 returned one matching PO (8138). The targeted database audit reported 60/60 SQL filter comparisons and 10/10 sampled screening reconciliations; full independent user-task accuracy and all browser combinations have not been established.
 
+### T21 — Verified typical end-to-end scenario (November 13, 2026)
+
+**T21 changed from Partial Pass to Pass** after a live three-screen walkthrough using **PO 4**, historical review date **2024-12-26**. The order was located on Screen 1 and selected using the exact sidebar search value `4` (rather than `04`). Screen 2 displayed **2 baseline stockout days** and **5.33 units of baseline unmet demand**. The stored 3/5/7-day scenarios showed incremental shortages of **8.60 / 14.33 / 20.07 units** and emergency premiums of **$17.20 / $28.67 / $40.13**, matching the previously checked database results.
+
+On Screen 3, a clearly marked **QA TEST** decision to **Contact supplier** was saved with a rationale. The decision appeared in the history and the tester confirmed that it remained visible after a browser refresh. This verifies the tested typical-case workflow in the current application environment; **it does not establish persistence across cloud redeployments or generalized user-task performance**. All other matrix statuses are unchanged.
+
+Evidence files to include under `Week12_T21_Evidence/`:
+
+- `T21_PO4_screen1_2024-12-26.png`
+- `T21_PO4_screen2_scenarios.png`
+- `T21_PO4_decision_saved_and_retrieved.png`
+
 The revised KPI2/KPI3 held-out evaluation used a **reconstructed partition**, not a hash-identical replay of the original frozen test file. The revised KPI2 MAE was 1.6381 units versus 1.6366 for the original, with decreasing-shortage scenario groups reduced from 685 to zero. The revised chained KPI3 MAE was 19.3527 currency units versus 38.0622 for the original direct model. These results do not establish real-world generalizability.
 
-**Submission documents:** The updated validation matrix and memo were added to the repository after the ZIP snapshot used for this README update. Insert their verified relative GitHub paths here before committing this README:
+**Submission documents:** The current files are listed below. Their exact repository directories were not available when this README was drafted; **replace the paths with the actual committed GitHub paths and turn them into working relative links before submission**.
 
-- Validation matrix: `REPLACE_WITH_ACTUAL_REPOSITORY_PATH/Validation_Matrix_Week12_Updated.xlsx`
-- Validation memo: `REPLACE_WITH_ACTUAL_REPOSITORY_PATH/Week12_Validation_Memo_Submission_Update.docx`
-- Demonstration recording: add a link after recording and uploading it.
+- Updated validation matrix: `Validation_Matrix_Week12_T21_Verified.xlsx` (**current**; replaces `Validation_Matrix_Week12_Updated.xlsx`)
+- Updated validation memo: `Week12_Validation_Memo_T21_Final.docx` (**current**; replaces `Week12_Validation_Memo_Submission_Update.docx`)
+- T21 screenshot evidence: `Week12_T21_Evidence/` (three files listed above)
+- Other validation evidence: `week12_targeted_validation_results.json`, `T02_sample.csv`, `T02_T04_audit.json` (link to their actual repository locations)
+- Reproducible test scripts: `week12_targeted_validation_windows.py` and related validation scripts, if committed (link to their actual locations)
+- Integrated demonstration recording: **add the actual recording link after uploading**
+
+Preserve the previous submission in Git history or an identifiable release/archive. The original synthetic dataset must not be overwritten by QA decision records. The README and memo report the **5 / 21 / 2** matrix totals; targeted automated checks passing **28/28** are a separate result and must not be confused with matrix Pass counts.
 
 **Release conclusion:** Suitable for classroom demonstration with disclosed limitations; not validated for live healthcare procurement or clinical operations.
 
