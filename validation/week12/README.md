@@ -78,6 +78,16 @@ The November 2026 validation matrix contains **28 tests: 5 Pass, 21 Partial Pass
 
 The updated supplier/item filters were demonstrated in Streamlit on 2026-10-09: Supplier 004 + Pharmacy Supplies Item 054 returned one matching PO (8138). The targeted database audit reported 60/60 SQL filter comparisons and 10/10 sampled screening reconciliations; full independent user-task accuracy and all browser combinations have not been established.
 
+### Final Validation Demonstration
+
+The final integrated demonstration presents the Supplier Risk Decision Support System's validation findings, covering all 28 tests in the validation matrix.
+
+The recording includes the three-screen application workflow, the typical scenario (PO 4), the challenging scenario (PO 23938), predictive-model evidence, management decision recording, and outstanding limitations.
+
+**[View or download the final demonstration video](validation/week12/demonstration/Final_DSS_Validation_Demonstration.mp4)**
+
+The recording integrates the functional demonstration and validation-matrix walkthrough requirements.
+
 ### T21 — Verified typical end-to-end scenario (November 13, 2026)
 
 **T21 changed from Partial Pass to Pass** after a live three-screen walkthrough using **PO 4**, historical review date **2024-12-26**. The order was located on Screen 1 and selected using the exact sidebar search value `4` (rather than `04`). Screen 2 displayed **2 baseline stockout days** and **5.33 units of baseline unmet demand**. The stored 3/5/7-day scenarios showed incremental shortages of **8.60 / 14.33 / 20.07 units** and emergency premiums of **$17.20 / $28.67 / $40.13**, matching the previously checked database results.
