@@ -120,7 +120,7 @@ if screen.startswith('1.') and section == 'Supplier Details':
     c5.metric('30-day average daily demand',f"{inv['mean_daily_demand']:,.2f}" if inv['mean_daily_demand'] is not None else 'Insufficient history')
     c6.metric('Days of demand history',str(inv['demand_days']))
     st.caption('Supplier history includes only deliveries known by the selected historical review date. Full feature-lineage verification remains limited (VAL-24).')
-    st.info('Predicted late-delivery probability: unavailable until a trained model is separately validated and deployed.')
+    st.info('An experimental late-delivery risk score is available in Screen 2 → Predictive Ranking. The model is not calibrated or approved for operational decision-making. No validated operational late-delivery probability is currently available.')
 if screen.startswith('2.') and section == 'Scenario Comparison':
     st.subheader('Scenario Comparison')
     st.caption('Stored retrospective what-if assessments: same horizon, baseline versus assumed 3/5/7-day delay. These are not forecasts of delay duration.')
