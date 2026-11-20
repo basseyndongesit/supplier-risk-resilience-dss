@@ -21,6 +21,18 @@ These materials document a research prototype using synthetic data. The applicat
 ## Purpose and intended use
 This three-screen Streamlit application helps a supply or inventory manager review supplier purchase-order risk, retrospective shortage scenarios, predictive KPI estimates, and human decisions. It is an academic prototype based on synthetic data, not a clinically or operationally validated decision system. Model predictions and what-if changes are not causal effects.
 
+### Reproducing the Week 12 release from GitHub
+
+Clone the repository and select the Week 12 branch:
+
+```powershell
+git clone https://github.com/basseyndongesit/supplier-risk-resilience-dss.git
+cd supplier-risk-resilience-dss
+git switch week12-validation
+```
+T27 reproducibility verification (November 19, 2026):
+A fresh clone of the week12-validation branch was tested using Python 3.13.18. All four approved database/model SHA-256 hashes matched the release manifest. The pinned dependencies installed successfully in a new virtual environment. The three-screen Streamlit application launched, and all screens and subscreens were manually navigated without reported errors. This does not establish complete functional regression coverage.
+
 ## Quick start (Windows PowerShell)
 Use Python 3.13 with a clean virtual environment. From the release folder:
 
